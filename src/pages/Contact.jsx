@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import logoImage from '../assets/logo.png';
+import contactHeroImage from '../assets/Contactherosection.jpg';
 import './Contact.css';
+
+// Initialize EmailJS with your public key
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY_HERE';
+emailjs.init(PUBLIC_KEY);
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +19,10 @@ const Contact = () => {
     message: ''
   });
 
+  const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -20,19 +30,45 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
-    alert('Thank you for your message! We will get back to you soon.');
+    setLoading(true);
+    setSubmitStatus(null);
+
+    try {
+      const templateParams = {
+        to_email: 'info.sahirweb@gmail.com',
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || 'Not provided',
+        subject: formData.subject,
+        message: formData.message
+      };
+
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_contact',
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_contact',
+        templateParams
+      );
+
+      setSubmitStatus({ type: 'success', message: 'Thank you for your message! We will get back to you soon.' });
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const toggleFAQ = (index) => {
+    setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
   return (
@@ -40,14 +76,14 @@ const Contact = () => {
       <Header />
       <div className="contact-page">
       {/* Hero Section */}
-      <section className="contact-hero">
+      <section className="contact-hero" style={{ backgroundImage: `url(${contactHeroImage})` }}>
         <div className="hero-overlay">
           <div className="hero-content">
             <div className="hero-logo">
-              <img src={logoImage} alt="Virtual Library Logo" />
+              <img src={logoImage} alt="Aziz Jan Welfare Trust Logo" />
             </div>
-            <h1>Contact Virtual Library</h1>
-            <p>Get in touch with us for educational support, resources, and assistance</p>
+            <h1>Aziz Jan Welfare Trust</h1>
+            <p>Empowering communities through education, support, and sustainable development. Connect with us for inquiries, partnerships, and assistance.</p>
           </div>
         </div>
       </section>
@@ -60,8 +96,7 @@ const Contact = () => {
               <div className="card-icon">
                 <i className="fas fa-phone"></i>
               </div>
-              <h3>Call Us</h3>
-              <p>Speak directly with our support team</p>
+              <h3>Call Us for help!</h3>
               <a href="tel:+923191954292" className="contact-link">+92 319 1954292</a>
             </div>
 
@@ -69,30 +104,8 @@ const Contact = () => {
               <div className="card-icon">
                 <i className="fas fa-envelope"></i>
               </div>
-              <h3>Email Us</h3>
-              <p>Send us your questions and feedback</p>
-              <a href="mailto:info@virtuallibrary.com" className="contact-link">info@virtuallibrary.com</a>
-            </div>
-
-            <div className="contact-card">
-              <div className="card-icon">
-                <i className="fab fa-whatsapp"></i>
-              </div>
-              <h3>WhatsApp Group</h3>
-              <p>Join our educational community</p>
-              <a href="https://chat.whatsapp.com/LRgagp3fuaM1hk8261RiCy" target="_blank" rel="noopener noreferrer" className="contact-link">Join Group</a>
-            </div>
-
-            <div className="contact-card">
-              <div className="card-icon">
-                <i className="fas fa-clock"></i>
-              </div>
-              <h3>Support Hours</h3>
-              <p>We're here to help you</p>
-              <div className="contact-link">
-                <div>Mon - Fri: 9:00 AM - 6:00 PM</div>
-                <div>Sat - Sun: 10:00 AM - 4:00 PM</div>
-              </div>
+              <h3>Mail Us</h3>
+              <a href="mailto:info@azizjantrust.com" className="contact-link">info@azizjantrust.com</a>
             </div>
           </div>
         </div>
@@ -108,6 +121,11 @@ const Contact = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="contact-form">
+              {submitStatus && (
+                <div className={`form-status ${submitStatus.type}`}>
+                  {submitStatus.message}
+                </div>
+              )}
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="name">Full Name *</label>
@@ -182,55 +200,33 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="submit-btn">
+              <button type="submit" className="submit-btn" disabled={loading}>
                 <i className="fas fa-paper-plane"></i>
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
         </div>
       </section>
 
-      {/* Quick Links Section */}
-      <section className="quick-links-section">
+      {/* Map Section */}
+      <section className="map-section">
         <div className="container">
-          <h2>Quick Access</h2>
-          <div className="quick-links-grid">
-            <div className="quick-link-card">
-              <div className="quick-icon">
-                <i className="fas fa-graduation-cap"></i>
-              </div>
-              <h3>VU Students</h3>
-              <p>Access Virtual University study materials, handouts, and past papers</p>
-              <a href="#virtual-university" className="quick-btn">Browse VU Resources</a>
-            </div>
-
-            <div className="quick-link-card">
-              <div className="quick-icon">
-                <i className="fas fa-university"></i>
-              </div>
-              <h3>AIOU Students</h3>
-              <p>Find Allama Iqbal Open University materials and assignments</p>
-              <a href="#allama-iqbal-uni" className="quick-btn">Browse AIOU Resources</a>
-            </div>
-
-            <div className="quick-link-card">
-              <div className="quick-icon">
-                <i className="fas fa-book-open"></i>
-              </div>
-              <h3>Free Study Materials</h3>
-              <p>Download free handouts, notes, and educational resources</p>
-              <a href="#courses" className="quick-btn">Access Materials</a>
-            </div>
-
-            <div className="quick-link-card">
-              <div className="quick-icon">
-                <i className="fas fa-laptop-code"></i>
-              </div>
-              <h3>Online Exams</h3>
-              <p>Practice with mock exams, quizzes, and timed tests</p>
-              <a href="#opportunities" className="quick-btn">Start Practice</a>
-            </div>
+          <div className="map-header">
+            <h2>Visit Us</h2>
+            <p>Find us at our location in Peshawar University Town</p>
+          </div>
+          <div className="map-container">
+            <iframe
+              title="Aziz Jan Welfare Trust Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5234567890123!2d71.5789!3d34.1937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d917c8d8d8d8d9%3A0x1234567890abcdef!2sPeshawar%20University%20Town!5e0!3m2!1sen!2spk!4v1234567890"
+              width="100%"
+              height="450"
+              style={{ border: 0, borderRadius: '12px' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -238,36 +234,176 @@ const Contact = () => {
       {/* FAQ Section */}
       <section className="faq-section">
         <div className="container">
-          <h2>Frequently Asked Questions</h2>
-          <div className="faq-grid">
+          <h2>People also ask</h2>
+          <div className="faq-accordion">
             <div className="faq-item">
-              <h3>How can I access study materials?</h3>
-              <p>All study materials are available for free on our website. Simply navigate to your university section (VU or AIOU) and browse by subject or material type.</p>
+              <button 
+                className={`faq-question ${expandedFAQ === 0 ? 'active' : ''}`}
+                onClick={() => toggleFAQ(0)}
+              >
+                <span>What is Aziz Jan Trust?</span>
+                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              {expandedFAQ === 0 && (
+                <div className="faq-answer">
+                  <p>Aziz Jan Trust is a non-profit organization dedicated to promoting education, healthcare, and community welfare across Pakistan and abroad. Our mission is to empower underprivileged individuals through quality education, skill development, and humanitarian support.</p>
+                </div>
+              )}
             </div>
 
             <div className="faq-item">
-              <h3>Are the materials updated regularly?</h3>
-              <p>Yes, we continuously update our materials with the latest handouts, past papers, and study resources to ensure students have access to current content.</p>
+              <button 
+                className={`faq-question ${expandedFAQ === 1 ? 'active' : ''}`}
+                onClick={() => toggleFAQ(1)}
+              >
+                <span>Where is Aziz Jan Trust located?</span>
+                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              {expandedFAQ === 1 && (
+                <div className="faq-answer">
+                  <p>The main branch of Aziz Jan Trust is located in Peshawar, Pakistan. Through partnerships and outreach programs, our services extend to major cities across Pakistan and several foreign countries.</p>
+                </div>
+              )}
             </div>
 
             <div className="faq-item">
-              <h3>Can I request specific study materials?</h3>
-              <p>Absolutely! Use the contact form above to request specific materials, and we'll do our best to add them to our collection.</p>
+              <button 
+                className={`faq-question ${expandedFAQ === 2 ? 'active' : ''}`}
+                onClick={() => toggleFAQ(2)}
+              >
+                <span>What kind of programs does Aziz Jan Trust offer?</span>
+                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              {expandedFAQ === 2 && (
+                <div className="faq-answer">
+                  <p>Aziz Jan Trust operates a variety of programs, including: Free education for deserving students, Healthcare and medical assistance, Food distribution and welfare support, Skill development and vocational training, and Emergency relief and community aid.</p>
+                </div>
+              )}
             </div>
 
             <div className="faq-item">
-              <h3>Is there a mobile app available?</h3>
-              <p>Currently, our website is fully responsive and works great on mobile devices. We're working on a dedicated mobile app for an even better experience.</p>
+              <button 
+                className={`faq-question ${expandedFAQ === 3 ? 'active' : ''}`}
+                onClick={() => toggleFAQ(3)}
+              >
+                <span>Is Aziz Jan Trust connected with Saylani Welfare International Trust?</span>
+                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              {expandedFAQ === 3 && (
+                <div className="faq-answer">
+                  <p>Yes. Aziz Jan Trust works in close collaboration with Saylani Welfare International Trust (SWIT) to extend its impact across Pakistan and internationally. This partnership helps deliver large-scale welfare and educational projects more efficiently.</p>
+                </div>
+              )}
             </div>
 
             <div className="faq-item">
-              <h3>How can I contribute to the platform?</h3>
-              <p>We welcome contributions! You can share study materials, provide feedback, or help other students through our WhatsApp community group.</p>
+              <button 
+                className={`faq-question ${expandedFAQ === 4 ? 'active' : ''}`}
+                onClick={() => toggleFAQ(4)}
+              >
+                <span>In which countries does Aziz Jan Trust have a presence?</span>
+                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              {expandedFAQ === 4 && (
+                <div className="faq-answer">
+                  <p>Apart from Pakistan, Aziz Jan Trust has operational connections and outreach activities in countries such as the United Arab Emirates (UAE), Saudi Arabia, the United Kingdom (UK), Canada, and the United States (USA).</p>
+                </div>
+              )}
             </div>
 
             <div className="faq-item">
-              <h3>What subjects are covered?</h3>
-              <p>We cover a wide range of subjects including Computer Science, Biology, Chemistry, Physics, Mathematics, Islamic Studies, and many more.</p>
+              <button 
+                className={`faq-question ${expandedFAQ === 5 ? 'active' : ''}`}
+                onClick={() => toggleFAQ(5)}
+              >
+                <span>How can I donate to Aziz Jan Trust?</span>
+                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              {expandedFAQ === 5 && (
+                <div className="faq-answer">
+                  <p>You can contribute by visiting our official website's donation page or by contacting our main branch in Peshawar. We accept donations in the form of cash, bank transfers, online contributions, and in-kind support such as food or supplies.</p>
+                </div>
+              )}
+            </div>
+
+            <div className="faq-item">
+              <button 
+                className={`faq-question ${expandedFAQ === 6 ? 'active' : ''}`}
+                onClick={() => toggleFAQ(6)}
+              >
+                <span>Are donations to Aziz Jan Trust tax-deductible?</span>
+                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              {expandedFAQ === 6 && (
+                <div className="faq-answer">
+                  <p>Yes, donations made to Aziz Jan Trust are fully transparent and utilized for charitable purposes. Tax exemption details may vary by region — please contact our support team for specific information.</p>
+                </div>
+              )}
+            </div>
+
+            <div className="faq-item">
+              <button 
+                className={`faq-question ${expandedFAQ === 7 ? 'active' : ''}`}
+                onClick={() => toggleFAQ(7)}
+              >
+                <span>How can I volunteer or get involved?</span>
+                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              {expandedFAQ === 7 && (
+                <div className="faq-answer">
+                  <p>We welcome volunteers who want to make a difference! You can apply through our Volunteer Program page or visit any nearby branch to join ongoing educational and welfare initiatives.</p>
+                </div>
+              )}
+            </div>
+
+            <div className="faq-item">
+              <button 
+                className={`faq-question ${expandedFAQ === 8 ? 'active' : ''}`}
+                onClick={() => toggleFAQ(8)}
+              >
+                <span>Does Aziz Jan Trust provide educational scholarships?</span>
+                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              {expandedFAQ === 8 && (
+                <div className="faq-answer">
+                  <p>Yes. The Trust offers educational scholarships and financial assistance to deserving and talented students, especially those from underprivileged backgrounds.</p>
+                </div>
+              )}
+            </div>
+
+            <div className="faq-item">
+              <button 
+                className={`faq-question ${expandedFAQ === 9 ? 'active' : ''}`}
+                onClick={() => toggleFAQ(9)}
+              >
+                <span>How can I contact Aziz Jan Trust for more information?</span>
+                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              {expandedFAQ === 9 && (
+                <div className="faq-answer">
+                  <p>You can reach us through Email: info@azizjantrust.com, Phone: +92-319-1954292, or visit our Head Office: Aziz Jan Trust, Peshawar, Pakistan.</p>
+                </div>
+              )}
             </div>
           </div>
         </div>

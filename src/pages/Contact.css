@@ -7,6 +7,9 @@
 /* Hero Section */
 .contact-hero {
   background: linear-gradient(135deg, #FF741F 0%, #e53e3e 100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -22,7 +25,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -170,6 +173,26 @@
   gap: 25px;
 }
 
+.form-status {
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-align: center;
+  animation: slideDown 0.3s ease;
+}
+
+.form-status.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-status.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -231,9 +254,14 @@
   align-self: center;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(255, 116, 31, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .submit-btn i {
@@ -319,6 +347,41 @@
   box-shadow: 0 5px 15px rgba(255, 116, 31, 0.3);
 }
 
+/* Map Section */
+.map-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.map-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.map-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.map-header p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+}
+
 /* FAQ Section */
 .faq-section {
   padding: 80px 0;
@@ -326,42 +389,88 @@
 }
 
 .faq-section h2 {
-  text-align: center;
+  text-align: left;
   font-size: 2.5rem;
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 50px;
 }
 
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .faq-item {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #e9ecef;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
   transition: all 0.3s ease;
-}
-
-.faq-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-.faq-item h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: #2c3e50;
-  margin-bottom: 15px;
 }
 
-.faq-item p {
+.faq-question:hover {
+  color: #FF741F;
+}
+
+.faq-question span {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  color: #999;
+  transition: transform 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.faq-question.active .faq-icon {
+  transform: rotate(180deg);
+  color: #FF741F;
+}
+
+.faq-answer {
+  padding: 0 0 25px 0;
+  animation: slideDown 0.3s ease;
+}
+
+.faq-answer p {
   color: #666;
   line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
@@ -382,6 +491,7 @@
   .contact-info-section,
   .contact-form-section,
   .quick-links-section,
+  .map-section,
   .faq-section {
     padding: 60px 0;
   }
@@ -396,22 +506,42 @@
   }
 
   .form-header h2,
+  .map-header h2,
   .quick-links-section h2,
   .faq-section h2 {
     font-size: 2rem;
   }
 
   .contact-cards,
-  .quick-links-grid,
-  .faq-grid {
+  .quick-links-grid {
     grid-template-columns: 1fr;
     gap: 25px;
   }
 
   .contact-card,
-  .quick-link-card,
-  .faq-item {
+  .quick-link-card {
     padding: 30px 20px;
+  }
+
+  .map-container iframe {
+    height: 350px;
+  }
+
+  .faq-question {
+    padding: 20px 0;
+    font-size: 1rem;
+  }
+
+  .faq-question span {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    padding: 0 0 20px 0;
+  }
+
+  .faq-answer p {
+    font-size: 0.95rem;
   }
 }
 
@@ -436,6 +566,7 @@
   .contact-info-section,
   .contact-form-section,
   .quick-links-section,
+  .map-section,
   .faq-section {
     padding: 40px 0;
   }
@@ -445,6 +576,7 @@
   }
 
   .form-header h2,
+  .map-header h2,
   .quick-links-section h2,
   .faq-section h2 {
     font-size: 1.8rem;
@@ -465,6 +597,32 @@
   .submit-btn {
     padding: 15px 30px;
     font-size: 1rem;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+
+  .faq-question {
+    padding: 18px 0;
+    font-size: 0.95rem;
+  }
+
+  .faq-question span {
+    font-size: 0.95rem;
+  }
+
+  .faq-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .faq-answer {
+    padding: 0 0 18px 0;
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;
   }
 }
 
