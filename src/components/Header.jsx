@@ -156,8 +156,8 @@ const Header = () => {
           <ul className="category-links">
             <li><Link to="/programs">Programs</Link></li>
             <li><a href="#courses">Courses</a></li>
-            <li><a href="#successes-story">Successes Story</a></li>
-            <li><a href="#presence">Presence</a></li>
+            <li><Link to="/success-story">Successes Story</Link></li>
+            <li><Link to="/presence">Presence</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
           </ul>
         </div>

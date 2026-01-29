@@ -3,115 +3,152 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './Presence.css';
 
+// Import Pakistan city images
+import karachiImg from '../assets/presence/Karachi.jfif';
+import peshawarImg from '../assets/presence/peshawar.jpg';
+import lahoreImg from '../assets/presence/lahore.jpg';
+import islamabadImg from '../assets/presence/Islamabad.jpg';
+import quettaImg from '../assets/presence/Quetta.webp';
+import multanImg from '../assets/presence/Multan.webp';
+import faisalabadImg from '../assets/presence/faisalabad.jpg';
+
+// Import country GIFs
+import uaeGif from '../assets/presence/UAE.gif';
+import ukGif from '../assets/presence/UnitedKingdom.gif';
+import usaGif from '../assets/presence/USA.gif';
+import turkeyGif from '../assets/presence/Turkey.gif';
+import bangladeshGif from '../assets/presence/Bangladesh.gif';
+
+// Import gallery images as fallbacks
+import gallery0 from '../assets/Gallery0.jpg';
+
+// Import hero background image
+import mainHQImage from '../assets/main head quarter.png';
+
 const Presence = () => {
-  const locations = [
+  const pakistanCities = [
     {
       id: 1,
-      category: 'Peshawar',
-      name: 'Peshawar Main Center',
-      address: 'Peshawar, Khyber Pakhtunkhwa',
-      description: 'Our flagship center in Peshawar offering comprehensive training programs and community services.',
+      city: 'Karachi',
+      region: 'Sindh',
+      status: 'Main Headquarters',
       icon: '🏢',
-      type: 'Main Center'
+      description: 'Saylani - Central headquarters for all operations',
+      label: 'Karachi',
+      image: karachiImg
     },
     {
       id: 2,
-      category: 'Peshawar',
-      name: 'University Town Branch',
-      address: 'University Town, Peshawar',
-      description: 'Dedicated center in University Town focusing on student education and skill development.',
-      icon: '🎓',
-      type: 'Educational Hub'
-    }
-  ];
-
-  const pakistanCities = [
-    {
-      id: 3,
-      city: 'Islamabad',
-      region: 'Federal Capital',
+      city: 'Peshawar',
+      region: 'Khyber Pakhtunkhwa',
       status: 'Active',
-      icon: '🏛️'
+      icon: '🏢',
+      description: 'Primary operational center',
+      label: 'Peshawar',
+      image: peshawarImg
     },
     {
-      id: 4,
+      id: 3,
       city: 'Lahore',
       region: 'Punjab',
       status: 'Active',
-      icon: '🌆'
+      icon: '🌆',
+      description: 'Educational and welfare hub',
+      label: 'Lahore',
+      image: lahoreImg
+    },
+    {
+      id: 4,
+      city: 'Islamabad',
+      region: 'Federal Capital',
+      status: 'Active',
+      icon: '🏛️',
+      description: 'Capital region operations',
+      label: 'Islamabad',
+      image: islamabadImg
     },
     {
       id: 5,
-      city: 'Karachi',
-      region: 'Sindh',
+      city: 'Quetta',
+      region: 'Balochistan',
       status: 'Active',
-      icon: '🏙️'
+      icon: '🏔️',
+      description: 'Community development center',
+      label: 'Quetta',
+      image: quettaImg
     },
     {
       id: 6,
       city: 'Multan',
       region: 'Punjab',
       status: 'Active',
-      icon: '🏘️'
+      icon: '🏘️',
+      description: 'Regional welfare services',
+      label: 'Multan',
+      image: multanImg
     },
     {
       id: 7,
-      city: 'Quetta',
-      region: 'Balochistan',
-      status: 'Active',
-      icon: '🏔️'
-    },
-    {
-      id: 8,
       city: 'Faisalabad',
       region: 'Punjab',
       status: 'Active',
-      icon: '🏭'
+      icon: '🏭',
+      description: 'Industrial city operations',
+      label: 'Faisalabad',
+      image: faisalabadImg
     }
   ];
 
   const internationalPresence = [
     {
-      id: 9,
-      country: 'United States',
-      region: 'North America',
-      status: 'Active',
-      icon: '🇺🇸'
-    },
-    {
-      id: 10,
-      country: 'United Kingdom',
-      region: 'Europe',
-      status: 'Active',
-      icon: '🇬🇧'
-    },
-    {
-      id: 11,
-      country: 'Canada',
-      region: 'North America',
-      status: 'Active',
-      icon: '🇨🇦'
-    },
-    {
-      id: 12,
-      country: 'Australia',
-      region: 'Oceania',
-      status: 'Active',
-      icon: '🇦🇺'
-    },
-    {
-      id: 13,
+      id: 8,
       country: 'United Arab Emirates',
       region: 'Middle East',
       status: 'Active',
-      icon: '🇦🇪'
+      icon: '🇦🇪',
+      description: 'International coordination office',
+      label: 'UAE',
+      image: uaeGif
     },
     {
-      id: 14,
-      country: 'Saudi Arabia',
-      region: 'Middle East',
+      id: 9,
+      country: 'United Kingdom',
+      region: 'Europe',
       status: 'Active',
-      icon: '🇸🇦'
+      icon: '🇬🇧',
+      description: 'Official office in Nottingham',
+      label: 'UK',
+      image: ukGif
+    },
+    {
+      id: 10,
+      country: 'United States',
+      region: 'North America',
+      status: 'Active',
+      icon: '🇺🇸',
+      description: 'Registered 501(c)(3) charity in Chicago',
+      label: 'USA',
+      image: usaGif
+    },
+    {
+      id: 11,
+      country: 'Turkey',
+      region: 'Middle East/Europe',
+      status: 'Active',
+      icon: '🇹🇷',
+      description: 'Syria border relief operations',
+      label: 'Turkey',
+      image: turkeyGif
+    },
+    {
+      id: 12,
+      country: 'Bangladesh',
+      region: 'South Asia',
+      status: 'Active',
+      icon: '🇧🇩',
+      description: 'Rohingya refugee support',
+      label: 'Bangladesh',
+      image: bangladeshGif
     }
   ];
 
@@ -119,104 +156,189 @@ const Presence = () => {
     <div className="presence-page">
       <Header />
       
-      <section className="presence-hero">
+      {/* Hero Section */}
+      <section className="presence-hero" style={{ backgroundImage: `url(${mainHQImage})` }}>
         <div className="presence-hero-content">
-          <h1 className="presence-hero-title">Our Global Presence</h1>
+          <h1 className="presence-hero-title">Global Presence of Aziz Jan Trust</h1>
           <p className="presence-hero-subtitle">
-            Serving communities across Pakistan and around the world with quality education and welfare services
+            Building a strong and compassionate network across Pakistan and the world
           </p>
         </div>
       </section>
 
-      <section className="presence-container">
-        {/* Peshawar Locations */}
-        <div className="presence-section">
-          <div className="section-header">
-            <h2 className="section-title">Peshawar Locations</h2>
-            <p className="section-description">Our primary centers in Peshawar and University Town</p>
-          </div>
-          
-          <div className="locations-grid">
-            {locations.map((location) => (
-              <div key={location.id} className="location-card">
-                <div className="location-icon">{location.icon}</div>
-                <div className="location-type">{location.type}</div>
-                <h3 className="location-name">{location.name}</h3>
-                <p className="location-address">{location.address}</p>
-                <p className="location-description">{location.description}</p>
-                <button className="location-btn">Get Directions</button>
-              </div>
-            ))}
+      {/* Main Content Section */}
+      <section className="presence-content">
+        <div className="content-container">
+          <div className="content-text">
+            <h2>Our Mission Across Borders</h2>
+            <p>
+              Saylani Welfare International Trust (SWIT), established in 1999, has built an extensive network of humanitarian 
+              and welfare services across Pakistan and beyond, touching countless lives through education, welfare, and 
+              humanitarian projects.
+            </p>
+            
+            <h3>Pakistan Operations</h3>
+            <p>
+              Our main headquarters is located in <strong>Karachi</strong>, serving as the central hub for all operations. 
+              Saylani operates through over <strong>125 branches</strong> located in major cities such as <strong>Karachi, Lahore, 
+              Islamabad, Rawalpindi, Hyderabad, and Faisalabad</strong>, ensuring that assistance reaches communities nationwide.
+            </p>
+
+            <h3>International Expansion</h3>
+            <p>
+              Beyond national borders, Saylani has established a global presence through official offices and active operations 
+              in several countries. We maintain official offices in the <strong>United Kingdom (Nottingham), United States (Chicago - 
+              Registered 501(c)(3) charity), and United Arab Emirates</strong> for international coordination.
+            </p>
+
+            <h3>Global Humanitarian Operations</h3>
+            <p>
+              In addition to our offices, Saylani conducts international relief and humanitarian operations in various regions, 
+              including the <strong>Turkey-Syria border</strong> (providing food and essential aid to Syrian refugees) and 
+              <strong>Bangladesh</strong> (delivering relief and support to Rohingya refugees).
+            </p>
+
+            <h3>Our Vision</h3>
+            <p>
+              Today, Saylani Welfare International Trust proudly serves in over <strong>63 areas of life</strong>, including food 
+              distribution, healthcare, education, vocational training, and disaster relief. With a growing presence both locally 
+              and internationally, we remain dedicated to our mission of uplifting humanity and building a better future for all.
+            </p>
           </div>
         </div>
+      </section>
 
-        {/* Pakistan Cities */}
-        <div className="presence-section">
+      {/* Main Headquarters - Saylani Karachi */}
+      <section className="headquarters-section">
+        <div className="section-container">
+          <div className="headquarters-content">
+            <div className="headquarters-image">
+              <img src={gallery0} alt="Karachi - Saylani" className="hq-image" />
+              <div className="headquarters-badge">Main Headquarters</div>
+            </div>
+            <div className="headquarters-text">
+              <h2>Saylani - Main Headquarters</h2>
+              <p className="location-info">📍 Karachi, Sindh, Pakistan</p>
+              <p>
+                Our main headquarters is strategically located in Karachi, one of Pakistan's largest and most vibrant cities. 
+                This central hub serves as the operational nerve center for all Saylani Welfare International Trust initiatives 
+                across the country and internationally.
+              </p>
+              <p>
+                From this headquarters, we coordinate our education programs, welfare initiatives, and humanitarian projects 
+                that reach thousands of beneficiaries every year. Operating through over 125 branches nationwide, Saylani 
+                strengthens our capacity to serve communities with greater efficiency and impact.
+              </p>
+              <div className="headquarters-features">
+                <div className="feature">
+                  <span className="feature-icon">📚</span>
+                  <span>Education Programs</span>
+                </div>
+                <div className="feature">
+                  <span className="feature-icon">🤝</span>
+                  <span>Welfare Services</span>
+                </div>
+                <div className="feature">
+                  <span className="feature-icon">🌍</span>
+                  <span>International Coordination</span>
+                </div>
+                <div className="feature">
+                  <span className="feature-icon">💼</span>
+                  <span>Project Management</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pakistan Presence */}
+      <section className="presence-section pakistan-section">
+        <div className="section-container">
           <div className="section-header">
             <h2 className="section-title">Presence Across Pakistan</h2>
-            <p className="section-description">Expanding our reach to multiple cities nationwide</p>
+            <p className="section-description">Operating through 125+ branches serving communities nationwide</p>
           </div>
           
           <div className="cities-grid">
             {pakistanCities.map((city) => (
               <div key={city.id} className="city-card">
-                <div className="city-icon">{city.icon}</div>
-                <h3 className="city-name">{city.city}</h3>
-                <p className="city-region">{city.region}</p>
-                <span className={`status-badge ${city.status.toLowerCase()}`}>
-                  ● {city.status}
-                </span>
+                <div className="city-image-wrapper">
+                  <img src={city.image} alt={city.label} className="city-image" />
+                  {city.status === 'Main Headquarters' && (
+                    <div className="main-badge">Main HQ</div>
+                  )}
+                </div>
+                <div className="city-content">
+                  <h3 className="city-name">{city.city}</h3>
+                  <p className="city-region">{city.region}</p>
+                  <p className="city-description">{city.description}</p>
+                  <span className={`status-badge ${city.status === 'Main Headquarters' ? 'main' : 'active'}`}>
+                    ● {city.status}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* International Presence */}
-        <div className="presence-section">
+      {/* International Presence */}
+      <section className="presence-section international-section">
+        <div className="section-container">
           <div className="section-header">
             <h2 className="section-title">International Presence</h2>
-            <p className="section-description">Serving Pakistani diaspora and international communities</p>
+            <p className="section-description">Official offices and humanitarian operations worldwide</p>
           </div>
           
           <div className="countries-grid">
             {internationalPresence.map((country) => (
               <div key={country.id} className="country-card">
-                <div className="country-flag">{country.icon}</div>
-                <h3 className="country-name">{country.country}</h3>
-                <p className="country-region">{country.region}</p>
-                <span className={`status-badge ${country.status.toLowerCase()}`}>
-                  ● {country.status}
-                </span>
+                <div className="country-image-wrapper">
+                  <img src={country.image} alt={country.label} className="country-image" />
+                </div>
+                <div className="country-content">
+                  <h3 className="country-name">{country.country}</h3>
+                  <p className="country-region">{country.region}</p>
+                  <p className="country-description">{country.description}</p>
+                  <span className={`status-badge ${country.status.toLowerCase()}`}>
+                    ● {country.status}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Statistics */}
-        <div className="presence-stats">
+      {/* Statistics */}
+      <section className="presence-stats">
+        <div className="stats-container">
           <div className="stat-box">
-            <div className="stat-number">2</div>
-            <div className="stat-label">Centers in Peshawar</div>
+            <div className="stat-number">125+</div>
+            <div className="stat-label">Branches in Pakistan</div>
           </div>
           <div className="stat-box">
-            <div className="stat-number">6</div>
-            <div className="stat-label">Cities in Pakistan</div>
+            <div className="stat-number">3</div>
+            <div className="stat-label">Official International Offices</div>
           </div>
           <div className="stat-box">
-            <div className="stat-number">6</div>
-            <div className="stat-label">Countries Worldwide</div>
+            <div className="stat-number">63+</div>
+            <div className="stat-label">Areas of Service</div>
           </div>
           <div className="stat-box">
-            <div className="stat-number">14+</div>
-            <div className="stat-label">Total Locations</div>
+            <div className="stat-number">1999</div>
+            <div className="stat-label">Year Established</div>
           </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="presence-cta">
+      {/* CTA Section */}
+      <section className="presence-cta">
+        <div className="cta-container">
           <h3 className="cta-title">Find a Center Near You</h3>
           <p className="cta-description">
-            Whether you're in Peshawar, across Pakistan, or anywhere in the world, we're here to serve you.
+            Whether you're in Karachi, across Pakistan, or anywhere in the world, we're here to serve you.
           </p>
           <a 
             href="https://chat.whatsapp.com/LRgagp3fuaM1hk8261RiCy" 

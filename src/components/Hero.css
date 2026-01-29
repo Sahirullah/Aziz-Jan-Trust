@@ -175,6 +175,7 @@
   animation: float 6s ease-in-out infinite;
   overflow: hidden;
   background: white;
+  filter: blur(1.2px);
 }
 
 .card-image {
@@ -183,6 +184,8 @@
   object-fit: cover;
   display: block;
   border-radius: 20px;
+  mix-blend-mode: multiply;
+  opacity: 0.95;
 }
 
 .card-1 {
