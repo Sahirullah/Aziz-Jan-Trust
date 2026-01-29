@@ -14,11 +14,11 @@ const About = () => {
         <section className="about-hero">
           <div className="about-hero-container">
             <div className="about-hero-logo">
-              <img src={logoImage} alt="Virtual Library Logo" className="hero-logo-image" />
+              <img src={logoImage} alt="Aziz Jan Trust Logo" className="hero-logo-image" />
             </div>
-            <h1 className="about-hero-title">About Virtual Library</h1>
+            <h1 className="about-hero-title">About Aziz Jan Trust</h1>
             <p className="about-hero-subtitle">
-              Empowering Pakistani students with quality educational resources since 2024
+              Bringing Hope to People Through Education, Healthcare & Community Development
             </p>
           </div>
         </section>
@@ -29,42 +29,82 @@ const About = () => {
             <div className="mission-content">
               <div className="mission-text">
                 <div className="mission-logo">
-                  <img src={logoImage} alt="Virtual Library Logo" className="mission-logo-image" />
+                  <img src={logoImage} alt="Aziz Jan Trust Logo" className="mission-logo-image" />
                   <div className="mission-logo-text">
-                    <h3 className="mission-logo-title">VIRTUAL LIBRARY</h3>
-                    <p className="mission-logo-subtitle">Educational Resources</p>
+                    <h3 className="mission-logo-title">AZIZ JAN TRUST</h3>
+                    <p className="mission-logo-subtitle">Bringing Hope to People</p>
                   </div>
                 </div>
                 <h2 className="section-title">Our Mission</h2>
                 <p className="mission-description">
-                  Virtual Library is dedicated to providing Pakistani university students with 
-                  easy access to high-quality educational resources. We believe that every student 
-                  deserves access to comprehensive study materials, regardless of their financial 
-                  situation or geographical location.
+                  Aziz Jan Trust is dedicated to transforming lives through comprehensive social development 
+                  initiatives. We work tirelessly to provide quality education, healthcare services, and 
+                  community support to underserved populations across Pakistan.
                 </p>
                 <p className="mission-description">
-                  Our platform serves as a bridge between academic excellence and accessibility, 
-                  offering handouts, assignments, past papers, and study notes from top universities 
-                  across Pakistan.
+                  Our vision is to create sustainable change by empowering individuals and communities 
+                  with the tools, knowledge, and resources they need to build better futures for themselves 
+                  and their families.
                 </p>
               </div>
               <div className="mission-stats">
                 <div className="stat-card">
-                  <div className="stat-number">10K+</div>
-                  <div className="stat-label">Study Materials</div>
+                  <div className="stat-number">50K+</div>
+                  <div className="stat-label">Lives Impacted</div>
                 </div>
                 <div className="stat-card">
-                  <div className="stat-number">5K+</div>
-                  <div className="stat-label">Happy Students</div>
+                  <div className="stat-number">100+</div>
+                  <div className="stat-label">Programs</div>
                 </div>
                 <div className="stat-card">
-                  <div className="stat-number">50+</div>
-                  <div className="stat-label">Universities</div>
+                  <div className="stat-number">25+</div>
+                  <div className="stat-label">Districts</div>
                 </div>
                 <div className="stat-card">
-                  <div className="stat-number">15+</div>
-                  <div className="stat-label">Subjects</div>
+                  <div className="stat-number">500+</div>
+                  <div className="stat-label">Team Members</div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Focus Areas Section */}
+        <section className="about-focus">
+          <div className="about-container">
+            <h2 className="section-title">Our Focus Areas</h2>
+            <div className="focus-grid">
+              <div className="focus-card">
+                <div className="focus-icon">📚</div>
+                <h3 className="focus-title">Education</h3>
+                <p className="focus-description">
+                  Providing quality education and vocational training to empower youth with skills 
+                  for employment and personal growth.
+                </p>
+              </div>
+              <div className="focus-card">
+                <div className="focus-icon">🏥</div>
+                <h3 className="focus-title">Healthcare</h3>
+                <p className="focus-description">
+                  Delivering accessible healthcare services and health awareness programs to 
+                  underserved communities.
+                </p>
+              </div>
+              <div className="focus-card">
+                <div className="focus-icon">👨‍👩‍👧‍👦</div>
+                <h3 className="focus-title">Community Development</h3>
+                <p className="focus-description">
+                  Building sustainable community infrastructure and supporting local economic 
+                  development initiatives.
+                </p>
+              </div>
+              <div className="focus-card">
+                <div className="focus-icon">🤝</div>
+                <h3 className="focus-title">Social Support</h3>
+                <p className="focus-description">
+                  Providing welfare assistance and social services to vulnerable populations 
+                  including orphans and elderly.
+                </p>
               </div>
             </div>
           </div>
@@ -73,19 +113,19 @@ const About = () => {
         {/* Story Section */}
         <section className="about-story">
           <div className="about-container">
-            <h2 className="section-title">Our Story</h2>
+            <h2 className="section-title">Our Journey</h2>
             <div className="story-content">
               <div className="story-text">
                 <p>
-                  Virtual Library was born from the shared struggles of Pakistani university students 
-                  who faced difficulties accessing quality study materials. Founded by a group of 
-                  passionate students and educators, we recognized the gap between academic requirements 
-                  and resource availability.
+                  Aziz Jan Trust was founded with a simple yet powerful vision: to bring hope to people 
+                  in need. Starting from humble beginnings, we recognized the critical gaps in education, 
+                  healthcare, and social services affecting vulnerable communities across Pakistan.
                 </p>
                 <p>
-                  What started as a small collection of shared notes among friends has grown into 
-                  Pakistan's largest digital library for educational resources. Today, we serve 
-                  thousands of students across the country, helping them achieve academic success.
+                  Over the years, through the dedication of our team and support of our donors and 
+                  volunteers, we have grown into a trusted organization serving thousands of families. 
+                  Today, we operate across multiple districts, running schools, health clinics, vocational 
+                  centers, and community support programs that are making real differences in people's lives.
                 </p>
               </div>
             </div>
@@ -95,70 +135,64 @@ const About = () => {
         {/* Values Section */}
         <section className="about-values">
           <div className="about-container">
-            <h2 className="section-title">Our Values</h2>
+            <h2 className="section-title">Our Core Values</h2>
             <div className="values-grid">
               <div className="value-card">
-                <div className="value-icon">🎓</div>
-                <h3 className="value-title">Academic Excellence</h3>
+                <div className="value-icon">❤️</div>
+                <h3 className="value-title">Compassion</h3>
                 <p className="value-description">
-                  We curate only the highest quality educational materials from top-performing 
-                  students and experienced educators.
+                  We approach every person with empathy and genuine care, understanding their unique 
+                  challenges and needs.
                 </p>
               </div>
               <div className="value-card">
-                <div className="value-icon">🤝</div>
-                <h3 className="value-title">Community Support</h3>
+                <div className="value-icon">🎯</div>
+                <h3 className="value-title">Integrity</h3>
                 <p className="value-description">
-                  Building a supportive community where students help each other succeed 
-                  through knowledge sharing.
+                  We operate with transparency and accountability, ensuring resources are used 
+                  effectively for maximum impact.
                 </p>
               </div>
               <div className="value-card">
-                <div className="value-icon">💡</div>
-                <h3 className="value-title">Innovation</h3>
+                <div className="value-icon">🌱</div>
+                <h3 className="value-title">Sustainability</h3>
                 <p className="value-description">
-                  Continuously improving our platform to provide better learning experiences 
-                  and easier access to resources.
+                  We focus on creating long-term solutions that empower communities to become 
+                  self-sufficient and resilient.
                 </p>
               </div>
               <div className="value-card">
-                <div className="value-icon">🌟</div>
-                <h3 className="value-title">Accessibility</h3>
+                <div className="value-icon">🌍</div>
+                <h3 className="value-title">Inclusivity</h3>
                 <p className="value-description">
-                  Making quality education accessible to all students, regardless of their 
-                  background or circumstances.
+                  We serve all people regardless of background, ensuring no one is left behind 
+                  in our development efforts.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Team Section */}
-        <section className="about-team">
+        {/* Impact Section */}
+        <section className="about-impact">
           <div className="about-container">
-            <h2 className="section-title">Meet Our Team</h2>
-            <p className="team-description">
-              Our dedicated team of educators, developers, and student advocates work tirelessly 
-              to bring you the best educational resources.
-            </p>
-            <div className="team-grid">
-              <div className="team-member">
-                <div className="member-avatar">👨‍💻</div>
-                <h3 className="member-name">Ahmad Hassan</h3>
-                <p className="member-role">Founder & CEO</p>
-                <p className="member-bio">Computer Science graduate passionate about educational technology</p>
+            <h2 className="section-title">Our Impact</h2>
+            <div className="impact-grid">
+              <div className="impact-item">
+                <div className="impact-number">10,000+</div>
+                <div className="impact-text">Students Educated</div>
               </div>
-              <div className="team-member">
-                <div className="member-avatar">👩‍🏫</div>
-                <h3 className="member-name">Fatima Khan</h3>
-                <p className="member-role">Academic Director</p>
-                <p className="member-bio">Former university lecturer with 10+ years of teaching experience</p>
+              <div className="impact-item">
+                <div className="impact-number">15,000+</div>
+                <div className="impact-text">Healthcare Beneficiaries</div>
               </div>
-              <div className="team-member">
-                <div className="member-avatar">👨‍🎓</div>
-                <h3 className="member-name">Ali Raza</h3>
-                <p className="member-role">Content Manager</p>
-                <p className="member-bio">Masters in Education, specializing in curriculum development</p>
+              <div className="impact-item">
+                <div className="impact-number">5,000+</div>
+                <div className="impact-text">Vocational Trainees</div>
+              </div>
+              <div className="impact-item">
+                <div className="impact-number">20,000+</div>
+                <div className="impact-text">Welfare Recipients</div>
               </div>
             </div>
           </div>
@@ -168,9 +202,10 @@ const About = () => {
         <section className="about-cta">
           <div className="about-container">
             <div className="cta-content">
-              <h2 className="cta-title">Join Our Community</h2>
+              <h2 className="cta-title">Join Us in Making a Difference</h2>
               <p className="cta-description">
-                Ready to access thousands of study materials and connect with fellow students?
+                Be part of our mission to bring hope and positive change to communities in need. 
+                Whether through volunteering, donations, or partnerships, your support matters.
               </p>
               <div className="cta-buttons">
                 <a 
@@ -179,10 +214,10 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="cta-button primary"
                 >
-                  Join WhatsApp Group
+                  Get Involved
                 </a>
-                <a href="/" className="cta-button secondary">
-                  Browse Materials
+                <a href="/contact" className="cta-button secondary">
+                  Contact Us
                 </a>
               </div>
             </div>

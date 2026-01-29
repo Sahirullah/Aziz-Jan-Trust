@@ -1,14 +1,11 @@
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import logoImage from '../assets/logo.png';
 import contactHeroImage from '../assets/Contactherosection.jpg';
 import './Contact.css';
 
-// Initialize EmailJS with your public key
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY_HERE';
-emailjs.init(PUBLIC_KEY);
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -36,20 +33,23 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      const templateParams = {
-        to_email: 'info.sahirweb@gmail.com',
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone || 'Not provided',
-        subject: formData.subject,
-        message: formData.message
-      };
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message
+        })
+      });
 
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_contact',
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_contact',
-        templateParams
-      );
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
 
       setSubmitStatus({ type: 'success', message: 'Thank you for your message! We will get back to you soon.' });
       setFormData({

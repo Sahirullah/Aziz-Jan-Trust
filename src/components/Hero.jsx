@@ -1,8 +1,8 @@
 import React from 'react';
-// Using card images from assets folder
-import card1 from '../assets/card1.png';
-import card2 from '../assets/card2.svg';
-import card3 from '../assets/card3.svg';
+// Using gallery images
+import card1 from '../assets/gallerypic2.jpg';
+import card2 from '../assets/zqwath.jpg';
+import card3 from '../assets/Gallery2.jpg';
 import './Hero.css';
 
 const Hero = () => {

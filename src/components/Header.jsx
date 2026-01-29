@@ -6,8 +6,6 @@ import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isJoinUsOpen, setIsJoinUsOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState({});
   const { isDarkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -37,18 +35,7 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleJoinUsDropdown = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsJoinUsOpen(!isJoinUsOpen);
-  };
 
-  const toggleExpandItem = (itemId) => {
-    setExpandedItems(prev => ({
-      ...prev,
-      [itemId]: !prev[itemId]
-    }));
-  };
   return (
     <header className="header">
       {/* Top Bar */}
@@ -102,38 +89,7 @@ const Header = () => {
             <ul className="nav-links">
               <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
               <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
-              <li className={`join-us-dropdown ${isJoinUsOpen ? 'active' : ''}`}>
-                <a href="#join-us" onClick={toggleJoinUsDropdown}>Join Us <span className="dropdown-arrow">▼</span></a>
-                <ul className={`dropdown-menu ${isJoinUsOpen ? 'active' : ''}`}>
-                  <li className={`expandable-item ${expandedItems['teacher'] ? 'expanded' : ''}`}>
-                    <a href="#teacher" onClick={(e) => { e.preventDefault(); toggleExpandItem('teacher'); }}>
-                      Teacher <span className="expand-arrow">▶</span>
-                    </a>
-                    <ul className="sub-items">
-                      <li><a href="#teacher-apply">Apply as Teacher</a></li>
-                      <li><a href="#teacher-resources">Teacher Resources</a></li>
-                    </ul>
-                  </li>
-                  <li className={`expandable-item ${expandedItems['student'] ? 'expanded' : ''}`}>
-                    <a href="#student" onClick={(e) => { e.preventDefault(); toggleExpandItem('student'); }}>
-                      Student <span className="expand-arrow">▶</span>
-                    </a>
-                    <ul className="sub-items">
-                      <li><a href="#student-enroll">Enroll Now</a></li>
-                      <li><a href="#student-courses">View Courses</a></li>
-                    </ul>
-                  </li>
-                  <li className={`expandable-item ${expandedItems['career'] ? 'expanded' : ''}`}>
-                    <a href="#more-career" onClick={(e) => { e.preventDefault(); toggleExpandItem('career'); }}>
-                      More Career <span className="expand-arrow">▶</span>
-                    </a>
-                    <ul className="sub-items">
-                      <li><a href="#career-opportunities">Career Opportunities</a></li>
-                      <li><a href="#career-training">Training Programs</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+              <li><Link to="/join-us" onClick={() => setIsMenuOpen(false)}>Join Us</Link></li>
               <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
             </ul>
           </nav>
