@@ -1,10 +1,62 @@
-import React from 'react';
+import { useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import logoImage from '../assets/logo.png';
+import instructor1 from '../assets/Instructors/Instructor1.png';
+import instructor2 from '../assets/Instructors/Instructor2.jfif';
+import instructor4 from '../assets/Instructors/instructor4.jfif';
+import instructor5 from '../assets/Instructors/insructor5.jpg';
 import './About.css';
 
 const About = () => {
+  const scrollContainerRef = useRef(null);
+
+  const leaders = [
+    {
+      id: 1,
+      name: 'Basit Ali',
+      role: 'Experienced Professional',
+      position: 'Admin-MD',
+      bio: 'Experienced Professional in Management Operations, Administration, Accounts, Marketing, Business Development, Social Media, and Amusement Park Operations.',
+      image: instructor1
+    },
+    {
+      id: 2,
+      name: 'Tatheer Hussain',
+      role: 'CEO of T4E',
+      position: 'Instructor',
+      bio: 'CEO of T4E, Software Developer, and International Technical Trainer associated with the University of Peshawar, SMIT, AKTI, and NAVTTC.',
+      image: instructor2
+    },
+    {
+      id: 3,
+      name: 'Faisal Habib',
+      role: 'Freelancer & Designer',
+      position: 'Instructor',
+      bio: 'Digital Marketing & Social Media Expert, Graphic & Motion Designer, UI/UX Designer, and Professional Trainer.',
+      image: instructor4
+    },
+    {
+      id: 4,
+      name: 'Aqleem Orakzai',
+      role: 'Frontend Engineer',
+      position: 'Instructor',
+      bio: 'Frontend Engineer skilled in HTML, CSS, JavaScript, React, Next.js, TypeScript, and Angular, creating dynamic and user-friendly web applications.',
+      image: instructor5
+    }
+  ];
+
+  const scroll = (direction) => {
+    const container = scrollContainerRef.current;
+    const scrollAmount = 400;
+    
+    if (direction === 'left') {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="about-page">
       <Header />
@@ -185,25 +237,30 @@ const About = () => {
               Our organization is guided by visionary leaders and supported by a dedicated team 
               committed to making a real difference in people's lives.
             </p>
-            <div className="leadership-grid">
-              <div className="leadership-member">
-                <div className="member-avatar">👨‍💼</div>
-                <h3 className="member-name">Aziz Jan</h3>
-                <p className="member-role">Founder & Chairman</p>
-                <p className="member-bio">Visionary philanthropist dedicated to community welfare</p>
+            
+            <div className="leadership-carousel-wrapper">
+              <button className="carousel-arrow left-arrow" onClick={() => scroll('left')}>
+                ←
+              </button>
+              
+              <div className="leadership-carousel" ref={scrollContainerRef}>
+                {leaders.map((leader) => (
+                  <div key={leader.id} className="leadership-card">
+                    <div className="leader-image-container">
+                      <img src={leader.image} alt={leader.name} className="leader-image" />
+                    </div>
+                    <div className="leader-info">
+                      <h3 className="leader-name">{leader.name}</h3>
+                      <p className="leader-role">{leader.role}</p>
+                      <p className="leader-bio">{leader.bio}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="leadership-member">
-                <div className="member-avatar">👩‍💼</div>
-                <h3 className="member-name">Saira Ahmed</h3>
-                <p className="member-role">Executive Director</p>
-                <p className="member-bio">20+ years experience in social development and NGO management</p>
-              </div>
-              <div className="leadership-member">
-                <div className="member-avatar">👨‍🏫</div>
-                <h3 className="member-name">Dr. Hassan Khan</h3>
-                <p className="member-role">Head of Education</p>
-                <p className="member-bio">Education specialist with expertise in curriculum development</p>
-              </div>
+              
+              <button className="carousel-arrow right-arrow" onClick={() => scroll('right')}>
+                →
+              </button>
             </div>
           </div>
         </section>

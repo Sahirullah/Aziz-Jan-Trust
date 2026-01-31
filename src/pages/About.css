@@ -374,6 +374,149 @@
   line-height: 1.8;
 }
 
+.leadership-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF741F 0%, #ff8c42 100%);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(255, 116, 31, 0.3);
+}
+
+.carousel-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 25px rgba(255, 116, 31, 0.4);
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.leadership-carousel {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 60px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.leadership-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.leadership-carousel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.leadership-carousel::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #FF741F 0%, #ff8c42 100%);
+  border-radius: 10px;
+}
+
+.leadership-carousel::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #e66a1a 0%, #ff7a2a 100%);
+}
+
+.leadership-card {
+  flex: 0 0 400px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.leadership-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.leader-image-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+}
+
+.position-label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d3748;
+  z-index: 5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.5px;
+}
+
+.leader-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.leadership-card:hover .leader-image {
+  transform: scale(1.05);
+}
+
+.leader-info {
+  padding: 30px;
+  text-align: center;
+}
+
+.leader-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.leader-role {
+  font-size: 15px;
+  color: #FF741F;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.leader-bio {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #718096;
+}
+
 .leadership-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -655,6 +798,24 @@
     font-size: 20px;
   }
 
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .leadership-carousel {
+    padding: 20px 50px;
+  }
+
+  .leadership-card {
+    flex: 0 0 350px;
+  }
+
+  .leader-image-container {
+    height: 250px;
+  }
+
   .cta-title {
     font-size: 36px;
   }
@@ -797,11 +958,103 @@
     font-size: 13px;
   }
 
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .leadership-carousel {
+    padding: 15px 40px;
+  }
+
+  .leadership-card {
+    flex: 0 0 280px;
+  }
+
+  .leader-image-container {
+    height: 200px;
+  }
+
+  .leader-info {
+    padding: 20px;
+  }
+
+  .leader-name {
+    font-size: 18px;
+  }
+
+  .leader-role {
+    font-size: 13px;
+  }
+
+  .leader-bio {
+    font-size: 12px;
+  }
+
   .cta-title {
     font-size: 28px;
   }
 
   .cta-description {
     font-size: 16px;
+  }
+}
+
+
+/* Mobile Carousel Adjustments */
+@media (max-width: 768px) {
+  .leadership-carousel {
+    padding: 20px 50px;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .leadership-card {
+    flex: 0 0 320px;
+  }
+
+  .leader-image-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leadership-carousel {
+    padding: 20px 40px;
+  }
+
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .leadership-card {
+    flex: 0 0 280px;
+  }
+
+  .leader-image-container {
+    height: 220px;
+  }
+
+  .leader-info {
+    padding: 20px;
+  }
+
+  .leader-name {
+    font-size: 18px;
+  }
+
+  .leader-role {
+    font-size: 13px;
+  }
+
+  .leader-bio {
+    font-size: 12px;
   }
 }
