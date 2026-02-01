@@ -71,6 +71,7 @@
   margin-bottom: 16px;
   letter-spacing: -0.5px;
   text-align: center;
+  animation: slideUp 0.8s ease-out 0.1s both;
 }
 
 .section-subtitle {
@@ -80,6 +81,29 @@
   max-width: 700px;
   margin: 0 auto 50px;
   line-height: 1.6;
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Why Join Section */

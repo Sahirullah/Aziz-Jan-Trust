@@ -27,6 +27,7 @@
   font-weight: 700;
   margin: 0 0 20px 0;
   letter-spacing: -1px;
+  animation: slideUp 0.8s ease-out 0.1s both;
 }
 
 .success-hero-subtitle {
@@ -35,6 +36,29 @@
   margin: 0;
   opacity: 0.95;
   line-height: 1.6;
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Stats Section */
