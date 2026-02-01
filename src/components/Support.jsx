@@ -113,23 +113,6 @@ const Support = () => {
             </div>
           ))}
         </div>
-        
-        <div className="support-footer">
-          <div className="support-stats">
-            <div className="stat-item">
-              <div className="stat-number">10K+</div>
-              <div className="stat-label">Study Materials</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">5K+</div>
-              <div className="stat-label">Happy Students</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">100%</div>
-              <div className="stat-label">Free Access</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -294,6 +294,11 @@
 .program-icon {
   font-size: 52px;
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
 }
 
 .program-title {

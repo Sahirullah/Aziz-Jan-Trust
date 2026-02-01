@@ -6,6 +6,7 @@ import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false);
   const { isDarkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -13,16 +14,20 @@ const Header = () => {
       if (isMenuOpen && !event.target.closest('.main-nav')) {
         setIsMenuOpen(false);
       }
+      if (isCategoryMenuOpen && !event.target.closest('.category-nav')) {
+        setIsCategoryMenuOpen(false);
+      }
     };
 
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
-  }, [isMenuOpen]);
+  }, [isMenuOpen, isCategoryMenuOpen]);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setIsMenuOpen(false);
+        setIsCategoryMenuOpen(false);
       }
     };
 
@@ -33,6 +38,11 @@ const Header = () => {
   const toggleMobileMenu = (e) => {
     e.stopPropagation();
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleCategoryMenu = (e) => {
+    e.stopPropagation();
+    setIsCategoryMenuOpen(!isCategoryMenuOpen);
   };
 
 

@@ -156,7 +156,7 @@ html {
 
 /* Category Navigation */
 .category-nav {
-  background: linear-gradient(135deg, #FF741F 0%, #ff8c42 100%);
+  background: linear-gradient(135deg, #1e1f1f 0%, #024e77 100%);
   padding: 0;
   margin: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -711,6 +711,43 @@ html {
 
   .submenu {
     min-width: 160px;
+  }
+}
+
+@media (max-width: 900px) {
+  .top-bar-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .contact-info {
+    display: flex;
+    gap: 15px;
+  }
+
+  .contact-item {
+    gap: 6px;
+  }
+
+  .contact-label {
+    font-size: 11px;
+  }
+
+  .contact-value {
+    font-size: 12px;
+  }
+
+  .logo-image {
+    width: 65px;
+    height: 65px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .logo-subtitle {
+    font-size: 11px;
   }
 }
 

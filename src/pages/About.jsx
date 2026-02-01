@@ -6,6 +6,7 @@ import instructor1 from '../assets/Instructors/Instructor1.png';
 import instructor2 from '../assets/Instructors/Instructor2.jfif';
 import instructor4 from '../assets/Instructors/instructor4.jfif';
 import instructor5 from '../assets/Instructors/insructor5.jpg';
+import { EducationIcon, HealthcareIcon, CommunityIcon, FamilyIcon } from '../components/Icons';
 import './About.css';
 
 const About = () => {
@@ -157,7 +158,9 @@ const About = () => {
             <h2 className="section-title">Our Core Programs</h2>
             <div className="programs-grid">
               <div className="program-card">
-                <div className="program-icon">📚</div>
+                <div className="program-icon">
+                  <EducationIcon />
+                </div>
                 <h3 className="program-title">Education Initiative</h3>
                 <p className="program-description">
                   Providing quality education to underprivileged children through schools, scholarships, 
@@ -165,7 +168,9 @@ const About = () => {
                 </p>
               </div>
               <div className="program-card">
-                <div className="program-icon">🏥</div>
+                <div className="program-icon">
+                  <HealthcareIcon />
+                </div>
                 <h3 className="program-title">Healthcare Services</h3>
                 <p className="program-description">
                   Offering accessible medical care, health camps, and awareness programs to remote 
@@ -173,7 +178,9 @@ const About = () => {
                 </p>
               </div>
               <div className="program-card">
-                <div className="program-icon">🤝</div>
+                <div className="program-icon">
+                  <CommunityIcon />
+                </div>
                 <h3 className="program-title">Community Development</h3>
                 <p className="program-description">
                   Supporting livelihood programs, skill development, and infrastructure projects 
@@ -181,7 +188,9 @@ const About = () => {
                 </p>
               </div>
               <div className="program-card">
-                <div className="program-icon">👨‍👩‍👧‍👦</div>
+                <div className="program-icon">
+                  <FamilyIcon />
+                </div>
                 <h3 className="program-title">Family Support</h3>
                 <p className="program-description">
                   Providing emergency relief, food assistance, and social support to vulnerable 
