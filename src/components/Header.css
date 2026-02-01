@@ -16,7 +16,7 @@ html {
 /* Top Bar */
 .top-bar {
   background: #f8f9fa;
-  padding: 12px 0;
+  padding: 3px 0;
 }
 
 .top-bar-container {
@@ -38,8 +38,8 @@ html {
   background: rgba(255, 116, 31, 0.1);
   border: 2px solid #FF741F;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,13 +84,13 @@ html {
 }
 
 .logo-image {
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: #2c3e50;
   margin: 0;
@@ -118,7 +118,7 @@ html {
 }
 
 .contact-icon {
-  font-size: 20px;
+  font-size: 18px;
   color: #FF741F;
 }
 
@@ -128,13 +128,13 @@ html {
 }
 
 .contact-label {
-  font-size: 12px;
+  font-size: 11px;
   color: #999;
   font-weight: 500;
 }
 
 .contact-value {
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
   font-weight: 600;
 }
@@ -488,6 +488,7 @@ html {
   overflow: visible !important;
   width: 100%;
   position: relative;
+  z-index: 1001;
 }
 
 .nav-links {
@@ -941,6 +942,7 @@ html {
     width: 100%;
     clip-path: none;
     position: relative;
+    overflow: hidden;
   }
 
   .nav-container {
