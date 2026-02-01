@@ -99,7 +99,16 @@ const Programs = () => {
                     </ul>
                   </div>
 
-                  <button className="enroll-btn">Enroll Now</button>
+                  <button className="enroll-btn">
+                    <a 
+                      href="https://www.saylanimit.com/enroll" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      style={{ color: 'inherit', textDecoration: 'none' }}
+                    >
+                      Enroll Now
+                    </a>
+                  </button>
                 </div>
               ))}
             </div>

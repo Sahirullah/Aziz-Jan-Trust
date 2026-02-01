@@ -211,7 +211,14 @@ const SuccessStory = () => {
         <div className="cta-container">
           <h2>Ready to Transform Your Career?</h2>
           <p>Join hundreds of students who have successfully completed our programs and landed their dream jobs</p>
-          <button className="cta-button">Enroll Now</button>
+          <a 
+            href="https://www.saylanimit.com/enroll" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="cta-button"
+          >
+            Enroll Now
+          </a>
         </div>
       </section>
 

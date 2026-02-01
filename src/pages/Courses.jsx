@@ -135,27 +135,6 @@ const Courses = () => {
                   <div className="course-content">
                     <h3>{course.title}</h3>
                     <p className="course-description">{course.description}</p>
-                    
-                    <div className="course-meta">
-                      <div className="meta-item">
-                        <span className="meta-label">Duration:</span>
-                        <span className="meta-value">{course.duration}</span>
-                      </div>
-                      <div className="meta-item">
-                        <span className="meta-label">Price:</span>
-                        <span className="meta-value">{course.price}</span>
-                      </div>
-                    </div>
-
-                    <div className="skills-list">
-                      <h4>Skills You'll Learn:</h4>
-                      <div className="skills-tags">
-                        {course.skills.map((skill, index) => (
-                          <span key={index} className="skill-tag">{skill}</span>
-                        ))}
-                      </div>
-                    </div>
-
                     <button className="enroll-btn">Enroll Now</button>
                   </div>
                 </div>
