@@ -45,7 +45,6 @@ const Header = () => {
     setIsCategoryMenuOpen(!isCategoryMenuOpen);
   };
 
-
   return (
     <header className="header">
       {/* Top Bar */}
@@ -96,6 +95,13 @@ const Header = () => {
       <div className="main-nav">
         <div className="nav-container">
           <nav className={isMenuOpen ? 'nav-open' : ''}>
+            <button 
+              className="nav-close-btn"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Close mobile menu"
+            >
+              ✕
+            </button>
             <ul className="nav-links">
               <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
               <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
@@ -119,12 +125,21 @@ const Header = () => {
       {/* Category Navigation - 2nd Header */}
       <div className="category-nav">
         <div className="category-container">
-          <ul className="category-links">
-            <li><Link to="/programs">Programs</Link></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><Link to="/success-story">Successes Story</Link></li>
-            <li><Link to="/presence">Presence</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
+          <button 
+            className={`category-menu-toggle ${isCategoryMenuOpen ? 'active' : ''}`}
+            onClick={toggleCategoryMenu}
+            aria-label="Toggle category menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul className={`category-links ${isCategoryMenuOpen ? 'category-open' : ''}`}>
+            <li><Link to="/programs" onClick={() => setIsCategoryMenuOpen(false)}>Programs</Link></li>
+            <li><a href="#courses" onClick={() => setIsCategoryMenuOpen(false)}>Courses</a></li>
+            <li><Link to="/success-story" onClick={() => setIsCategoryMenuOpen(false)}>Successes Story</Link></li>
+            <li><Link to="/presence" onClick={() => setIsCategoryMenuOpen(false)}>Presence</Link></li>
+            <li><Link to="/gallery" onClick={() => setIsCategoryMenuOpen(false)}>Gallery</Link></li>
           </ul>
         </div>
       </div>
