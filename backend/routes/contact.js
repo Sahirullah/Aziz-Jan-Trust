@@ -57,8 +57,8 @@ router.post('/send', contactValidation, async (req, res) => {
     const { fullName, email, phoneNumber, subject, message } = req.body;
 
     // For development/testing - skip email sending if no proper email config
-    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS || 
-        process.env.EMAIL_PASS.includes('(') || process.env.EMAIL_PASS.includes('your-')) {
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD || 
+        process.env.EMAIL_PASSWORD.includes('(') || process.env.EMAIL_PASSWORD.includes('your-')) {
       console.log('📧 Email would be sent to:', process.env.RECIPIENT_EMAIL);
       console.log('📝 Form data received:', { fullName, email, phoneNumber, subject, message });
       
