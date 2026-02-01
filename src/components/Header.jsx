@@ -136,7 +136,7 @@ const Header = () => {
           </button>
           <ul className={`category-links ${isCategoryMenuOpen ? 'category-open' : ''}`}>
             <li><Link to="/programs" onClick={() => setIsCategoryMenuOpen(false)}>Programs</Link></li>
-            <li><a href="#courses" onClick={() => setIsCategoryMenuOpen(false)}>Courses</a></li>
+            <li><Link to="/courses" onClick={() => setIsCategoryMenuOpen(false)}>Courses</Link></li>
             <li><Link to="/success-story" onClick={() => setIsCategoryMenuOpen(false)}>Successes Story</Link></li>
             <li><Link to="/presence" onClick={() => setIsCategoryMenuOpen(false)}>Presence</Link></li>
             <li><Link to="/gallery" onClick={() => setIsCategoryMenuOpen(false)}>Gallery</Link></li>

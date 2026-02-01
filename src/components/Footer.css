@@ -85,7 +85,7 @@
 .social-link {
   width: 40px;
   height: 40px;
-  background: rgba(0, 168, 232, 0.15);
+  background: rgba(255, 116, 31, 0.15);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -95,14 +95,21 @@
   font-weight: 600;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 168, 232, 0.3);
+  border: 1px solid rgba(255, 116, 31, 0.3);
+  color: white;
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  color: white;
 }
 
 .social-link:hover {
-  background: linear-gradient(135deg, #00a8e8 0%, #00d4ff 100%);
+  background: linear-gradient(135deg, #FF741F 0%, #FF8C42 100%);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 168, 232, 0.4);
-  border-color: #00d4ff;
+  box-shadow: 0 8px 20px rgba(255, 116, 31, 0.4);
+  border-color: #FF8C42;
 }
 
 .footer-title {
@@ -143,7 +150,7 @@
 }
 
 .footer-links a:hover {
-  color: #00d4ff;
+  color: #FF741F;
   transform: translateX(5px);
 }
 
@@ -246,7 +253,7 @@
 }
 
 .footer-legal a:hover {
-  color: #00d4ff;
+  color: #FF741F;
 }
 
 .footer-bottom-right {

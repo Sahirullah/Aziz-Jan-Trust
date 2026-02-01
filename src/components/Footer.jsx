@@ -1,4 +1,5 @@
 import logoImage from '../assets/logo.png';
+import { FacebookIcon, TwitterIcon, InstagramIcon, LinkedInIcon, WhatsAppIcon } from './Icons';
 import './Footer.css';
 
 const Footer = () => {
@@ -22,11 +23,21 @@ const Footer = () => {
               to underserved populations across Pakistan.
             </p>
             <div className="footer-social">
-              <a href="https://www.facebook.com/azizjantrust" target="_blank" rel="noopener noreferrer" className="social-link" title="Facebook">f</a>
-              <a href="https://twitter.com/azizjantrust" target="_blank" rel="noopener noreferrer" className="social-link" title="Twitter">𝕏</a>
-              <a href="https://www.instagram.com/azizjantrust" target="_blank" rel="noopener noreferrer" className="social-link" title="Instagram">📷</a>
-              <a href="https://www.linkedin.com/company/azizjantrust" target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn">in</a>
-              <a href="https://chat.whatsapp.com/LRgagp3fuaM1hk8261RiCy" target="_blank" rel="noopener noreferrer" className="social-link" title="WhatsApp">💬</a>
+              <a href="https://www.facebook.com/azizjantrust" target="_blank" rel="noopener noreferrer" className="social-link" title="Facebook">
+                <FacebookIcon />
+              </a>
+              <a href="https://twitter.com/azizjantrust" target="_blank" rel="noopener noreferrer" className="social-link" title="Twitter">
+                <TwitterIcon />
+              </a>
+              <a href="https://www.instagram.com/azizjantrust" target="_blank" rel="noopener noreferrer" className="social-link" title="Instagram">
+                <InstagramIcon />
+              </a>
+              <a href="https://www.linkedin.com/company/azizjantrust" target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn">
+                <LinkedInIcon />
+              </a>
+              <a href="https://chat.whatsapp.com/LRgagp3fuaM1hk8261RiCy" target="_blank" rel="noopener noreferrer" className="social-link" title="WhatsApp">
+                <WhatsAppIcon />
+              </a>
             </div>
           </div>
 

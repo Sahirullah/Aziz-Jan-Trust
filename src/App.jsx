@@ -6,6 +6,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'
 import Programs from './pages/Programs'
+import Courses from './pages/Courses'
 import SuccessStory from './pages/SuccessStory'
 import Presence from './pages/Presence'
 import TeacherApply from './pages/TeacherApply'
@@ -24,6 +25,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/programs" element={<Programs />} />
+            <Route path="/courses" element={<Courses />} />
             <Route path="/success-story" element={<SuccessStory />} />
             <Route path="/presence" element={<Presence />} />
             <Route path="/join-us" element={<JoinUs />} />
