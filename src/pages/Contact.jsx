@@ -9,9 +9,9 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    fullName: '',
     email: '',
-    phone: '',
+    phoneNumber: '',
     subject: '',
     message: ''
   });
@@ -19,49 +19,74 @@ const Contact = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
   const [loading, setLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [validationErrors, setValidationErrors] = useState({});
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+    // Clear validation error for this field when user starts typing
+    if (validationErrors[e.target.name]) {
+      setValidationErrors({
+        ...validationErrors,
+        [e.target.name]: null
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setSubmitStatus(null);
+    setValidationErrors({});
 
     try {
-      const response = await fetch(`${API_URL}/api/contact`, {
+      const response = await fetch(`${API_URL}/api/contact/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name,
+          fullName: formData.fullName,
           email: formData.email,
-          phone: formData.phone,
+          phoneNumber: formData.phoneNumber,
           subject: formData.subject,
           message: formData.message
         })
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        if (data.errors && Array.isArray(data.errors)) {
+          // Handle validation errors
+          const errorMap = {};
+          data.errors.forEach(error => {
+            errorMap[error.path] = error.msg;
+          });
+          setValidationErrors(errorMap);
+          setSubmitStatus({ type: 'error', message: 'Please fix the errors below and try again.' });
+        } else {
+          throw new Error(data.message || 'Failed to send message');
+        }
+        return;
       }
 
-      setSubmitStatus({ type: 'success', message: 'Thank you for your message! We will get back to you soon.' });
+      setSubmitStatus({ type: 'success', message: data.message });
       setFormData({
-        name: '',
+        fullName: '',
         email: '',
-        phone: '',
+        phoneNumber: '',
         subject: '',
         message: ''
       });
     } catch (error) {
       console.error('Error submitting form:', error);
-      setSubmitStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+      setSubmitStatus({ 
+        type: 'error', 
+        message: error.message || 'Failed to send message. Please try again.' 
+      });
     } finally {
       setLoading(false);
     }
@@ -128,16 +153,20 @@ const Contact = () => {
               )}
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="name">Full Name *</label>
+                  <label htmlFor="fullName">Full Name *</label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="fullName"
+                    name="fullName"
+                    value={formData.fullName}
                     onChange={handleChange}
                     required
                     placeholder="Enter your full name"
+                    className={validationErrors.fullName ? 'error' : ''}
                   />
+                  {validationErrors.fullName && (
+                    <div className="field-error">{validationErrors.fullName}</div>
+                  )}
                 </div>
 
                 <div className="form-group">
@@ -150,21 +179,29 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="Enter your email address"
+                    className={validationErrors.email ? 'error' : ''}
                   />
+                  {validationErrors.email && (
+                    <div className="field-error">{validationErrors.email}</div>
+                  )}
                 </div>
               </div>
 
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="phone">Phone Number</label>
+                  <label htmlFor="phoneNumber">Phone Number</label>
                   <input
                     type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
                     onChange={handleChange}
                     placeholder="Enter your phone number"
+                    className={validationErrors.phoneNumber ? 'error' : ''}
                   />
+                  {validationErrors.phoneNumber && (
+                    <div className="field-error">{validationErrors.phoneNumber}</div>
+                  )}
                 </div>
 
                 <div className="form-group">
@@ -175,15 +212,19 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
+                    className={validationErrors.subject ? 'error' : ''}
                   >
                     <option value="">Select a subject</option>
-                    <option value="general">General Inquiry</option>
-                    <option value="technical">Technical Support</option>
-                    <option value="academic">Academic Help</option>
-                    <option value="resources">Study Materials Request</option>
-                    <option value="feedback">Feedback & Suggestions</option>
-                    <option value="partnership">Partnership Opportunities</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Technical Support">Technical Support</option>
+                    <option value="Academic Help">Academic Help</option>
+                    <option value="Study Materials Request">Study Materials Request</option>
+                    <option value="Feedback & Suggestions">Feedback & Suggestions</option>
+                    <option value="Partnership Opportunities">Partnership Opportunities</option>
                   </select>
+                  {validationErrors.subject && (
+                    <div className="field-error">{validationErrors.subject}</div>
+                  )}
                 </div>
               </div>
 
@@ -197,7 +238,11 @@ const Contact = () => {
                   required
                   rows="6"
                   placeholder="Please describe your inquiry in detail..."
+                  className={validationErrors.message ? 'error' : ''}
                 ></textarea>
+                {validationErrors.message && (
+                  <div className="field-error">{validationErrors.message}</div>
+                )}
               </div>
 
               <button type="submit" className="submit-btn" disabled={loading}>
