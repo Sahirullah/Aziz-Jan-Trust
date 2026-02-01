@@ -1,9 +1,10 @@
 .hero {
   background: url('../assets/presence/peshawar.jpg') center/cover no-repeat;
-  min-height: 85vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
-  color: white;
+  color:   #1e1f1f;
+  text-shadow:  white 4px 2px 4px;
   position: relative;
   overflow: hidden;
 }
@@ -258,7 +259,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 70vh;
+    min-height: 60vh;
     padding: 40px 0;
   }
 

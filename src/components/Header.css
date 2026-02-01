@@ -797,8 +797,8 @@ html {
   }
 
   .main-nav {
-    width: 50%;
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    width: 100%;
+    clip-path: none;
     position: relative;
   }
 
