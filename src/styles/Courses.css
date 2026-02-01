@@ -38,14 +38,16 @@
 }
 
 .courses-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  width: 100%;
 }
 
 /* Course Card */
@@ -96,6 +98,7 @@
 
 .course-content {
   padding: 25px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -112,63 +115,10 @@
   color: #666;
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-.course-meta {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
 
-.meta-item {
-  flex: 1;
-}
-
-.meta-label {
-  display: block;
-  font-weight: 600;
-  color: #333;
-  font-size: 0.85rem;
-  margin-bottom: 5px;
-}
-
-.meta-value {
-  display: block;
-  color: #FF741F;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.skills-list {
-  margin-bottom: 20px;
-  flex-grow: 1;
-}
-
-.skills-list h4 {
-  color: #333;
-  font-size: 0.95rem;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.skills-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tag {
-  background: rgba(255, 116, 31, 0.1);
-  color: #FF741F;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border: 1px solid rgba(255, 116, 31, 0.3);
-}
 
 .enroll-btn {
   background: linear-gradient(135deg, #FF741F 0%, #FF8C42 100%);
@@ -180,7 +130,8 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  align-self: flex-start;
+  align-self: center;
+  margin-top: auto;
 }
 
 .enroll-btn:hover {
@@ -242,25 +193,14 @@
   color: #b0b0b0;
 }
 
-:root[data-theme="dark"] .meta-label {
-  color: #e0e0e0;
-}
-
-:root[data-theme="dark"] .meta-value {
-  color: #FF8C42;
-}
-
-:root[data-theme="dark"] .skills-list h4 {
-  color: #e0e0e0;
-}
-
-:root[data-theme="dark"] .skill-tag {
-  background: rgba(255, 116, 31, 0.2);
-  color: #FF8C42;
-  border-color: rgba(255, 116, 31, 0.4);
-}
-
 /* Responsive */
+@media (max-width: 1200px) {
+  .courses-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+
 @media (max-width: 1024px) {
   .courses-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -338,30 +278,6 @@
   .course-description {
     font-size: 0.9rem;
     margin-bottom: 15px;
-  }
-
-  .course-meta {
-    gap: 10px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-  }
-
-  .meta-label {
-    font-size: 0.8rem;
-  }
-
-  .meta-value {
-    font-size: 0.9rem;
-  }
-
-  .skills-list h4 {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-
-  .skill-tag {
-    font-size: 0.8rem;
-    padding: 5px 10px;
   }
 
   .enroll-btn {
