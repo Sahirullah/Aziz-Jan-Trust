@@ -1,0 +1,20 @@
+{
+  "name": "aziz-jan-trust-backend",
+  "version": "1.0.0",
+  "description": "Backend server for Aziz Jan Welfare Trust contact form",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["express", "nodemailer", "contact-form"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  }
+}

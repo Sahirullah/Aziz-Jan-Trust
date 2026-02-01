@@ -8,7 +8,11 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// Middleware
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  credentials: true
+}));
 app.use(express.json());
 
 // Check if environment variables are set
@@ -31,7 +35,7 @@ transporter.verify((error, success) => {
   if (error) {
     console.error('Transporter verification failed:', error);
   } else {
-    console.log('Transporter is ready to send emails');
+    console.log('✓ Transporter is ready to send emails');
   }
 });
 
@@ -53,7 +57,7 @@ app.post('/api/contact', async (req, res) => {
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'info.sahirweb@gmail.com',
+      to: process.env.RECIPIENT_EMAIL || 'sahirullah313@gmail.com',
       subject: `New Contact Form Submission: ${subject}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -76,7 +80,13 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+// 404 handler
+app.use((req, res) => {
+  res.status(404).json({ error: 'Endpoint not found' });
+});
+
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-  console.log(`Email configured for: ${process.env.EMAIL_USER}`);
+  console.log(`\n🚀 Backend server running on http://localhost:${PORT}`);
+  console.log(`📧 Email configured for: ${process.env.EMAIL_USER}`);
+  console.log(`✓ Ready to receive contact form submissions\n`);
 });

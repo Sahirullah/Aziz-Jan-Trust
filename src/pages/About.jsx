@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import logoImage from '../assets/logo.png';
 import instructor1 from '../assets/Instructors/Instructor1.png';
 import instructor2 from '../assets/Instructors/Instructor2.jfif';
 import instructor4 from '../assets/Instructors/instructor4.jfif';
@@ -66,9 +65,6 @@ const About = () => {
         {/* Hero Section */}
         <section className="about-hero">
           <div className="about-hero-container">
-            <div className="about-hero-logo">
-              <img src={logoImage} alt="Aziz Jan Trust Logo" className="hero-logo-image" />
-            </div>
             <h1 className="about-hero-title">Aziz Jan Trust</h1>
             <p className="about-hero-subtitle">
               Bringing Hope to People Through Education, Healthcare & Community Development

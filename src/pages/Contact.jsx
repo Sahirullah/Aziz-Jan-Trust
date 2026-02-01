@@ -6,6 +6,7 @@ import contactHeroImage from '../assets/Contactherosection.jpg';
 import './Contact.css';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const BACKEND_URL = `${API_URL}/api/contact`;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch(`${API_URL}/api/contact`, {
+      const response = await fetch(BACKEND_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
