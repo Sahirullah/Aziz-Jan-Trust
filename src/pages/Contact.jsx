@@ -5,8 +5,7 @@ import logoImage from '../assets/logo.png';
 import contactHeroImage from '../assets/Contactherosection.jpg';
 import './Contact.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
-const BACKEND_URL = `${API_URL}/api/contact`;
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,11 +42,7 @@ const Contact = () => {
     setValidationErrors({});
 
     try {
-<<<<<<< HEAD
       const response = await fetch(`${API_URL}/api/contact/send`, {
-=======
-      const response = await fetch(BACKEND_URL, {
->>>>>>> 7f510343506543107adf5ab263fe5a77e200a285
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

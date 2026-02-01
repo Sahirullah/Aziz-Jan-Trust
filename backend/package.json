@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "contact-form-backend",
   "version": "1.0.0",
   "description": "Backend API for contact form with Nodemailer",
@@ -8,25 +7,10 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-=======
-  "name": "aziz-jan-trust-backend",
-  "version": "1.0.0",
-  "description": "Backend server for Aziz Jan Welfare Trust contact form",
-  "type": "module",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
-  },
-  "keywords": ["express", "nodemailer", "contact-form"],
-  "author": "",
-  "license": "ISC",
->>>>>>> 7f510343506543107adf5ab263fe5a77e200a285
   "dependencies": {
     "express": "^4.18.2",
     "nodemailer": "^6.9.7",
     "cors": "^2.8.5",
-<<<<<<< HEAD
     "dotenv": "^16.3.1",
     "express-rate-limit": "^7.1.5",
     "helmet": "^7.1.0",
@@ -39,8 +23,3 @@
   "author": "Your Name",
   "license": "MIT"
 }
-=======
-    "dotenv": "^16.3.1"
-  }
-}
->>>>>>> 7f510343506543107adf5ab263fe5a77e200a285
