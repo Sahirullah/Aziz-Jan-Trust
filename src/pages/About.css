@@ -16,13 +16,15 @@
 
 /* Hero Section */
 .about-hero {
-  background: linear-gradient(135deg, #FF741F 0%, #ff8c42 100%);
-  color: white;
-  padding: 50px 0 50px;
+color: black;
+  text-align: center;
+  margin-bottom: 60px;
   position: relative;
-  overflow: hidden;
-  justify-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .about-hero::before {
