@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/SuccessStory.css';
@@ -12,7 +13,12 @@ import gallery0 from '../assets/Gallery0.jpg';
 import gallery1 from '../assets/Gallery1.jpg';
 
 const SuccessStory = () => {
+  const navigate = useNavigate();
   const [expandedStory, setExpandedStory] = useState(null);
+
+  const handleEnrollClick = () => {
+    navigate('/join-us');
+  };
 
   const successStories = [
     {
@@ -212,10 +218,9 @@ const SuccessStory = () => {
           <h2>Ready to Transform Your Career?</h2>
           <p>Join hundreds of students who have successfully completed our programs and landed their dream jobs</p>
           <a 
-            href="https://www.saylanimit.com/enroll" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            onClick={handleEnrollClick}
             className="cta-button"
+            style={{ cursor: 'pointer' }}
           >
             Enroll Now
           </a>

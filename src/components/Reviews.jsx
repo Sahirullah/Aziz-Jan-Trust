@@ -1,4 +1,4 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import user1 from '../assets/user1.png';
 import user2 from '../assets/user2.png';
 import user3 from '../assets/user3.png';
@@ -6,6 +6,11 @@ import user4 from '../assets/user4.png';
 import './Reviews.css';
 
 const Reviews = () => {
+  const navigate = useNavigate();
+
+  const handleEnrollClick = () => {
+    navigate('/join-us');
+  };
   const reviews = [
     {
       id: 2,
@@ -131,10 +136,9 @@ const Reviews = () => {
             <h3 className="cta-title">Ready to Join Our Student Community?</h3>
             <p className="cta-subtitle">Enroll in our courses and start your journey of learning and growth</p>
             <a 
-              href="https://chat.whatsapp.com/LRgagp3fuaM1hk8261RiCy" 
-              target="_blank" 
-              rel="noopener noreferrer"
+              onClick={handleEnrollClick}
               className="cta-button"
+              style={{ cursor: 'pointer' }}
             >
               Enroll Now
               <span className="btn-arrow">→</span>

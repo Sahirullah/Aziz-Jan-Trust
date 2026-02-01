@@ -85,23 +85,15 @@
 }
 
 .course-level {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: linear-gradient(135deg, #FF741F 0%, #FF8C42 100%);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  display: none;
 }
 
 .course-content {
   padding: 25px;
-  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  justify-content: space-between;
 }
 
 .course-content h3 {
@@ -124,14 +116,15 @@
   background: linear-gradient(135deg, #FF741F 0%, #FF8C42 100%);
   color: white;
   border: none;
-  padding: 12px 30px;
+  padding: 12px 30px 12px 30px;
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: center;
-  margin-top: auto;
+  margin-top: 35px;
+  margin-bottom: 8px;
 }
 
 .enroll-btn:hover {

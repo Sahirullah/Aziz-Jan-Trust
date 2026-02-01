@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/Courses.css';
@@ -15,6 +16,12 @@ import videoEditing from '../assets/courses/video editing.avif';
 import webAppDevelopment from '../assets/courses/web-app-development.jpg';
 
 const Courses = () => {
+  const navigate = useNavigate();
+
+  const handleEnrollClick = () => {
+    navigate('/join-us');
+  };
+
   const courses = [
     {
       id: 1,
@@ -135,7 +142,7 @@ const Courses = () => {
                   <div className="course-content">
                     <h3>{course.title}</h3>
                     <p className="course-description">{course.description}</p>
-                    <button className="enroll-btn">Enroll Now</button>
+                    <button className="enroll-btn" onClick={handleEnrollClick}>Enroll Now</button>
                   </div>
                 </div>
               ))}

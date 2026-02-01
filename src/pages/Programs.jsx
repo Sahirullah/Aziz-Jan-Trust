@@ -1,9 +1,14 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/Programs.css';
 
 const Programs = () => {
+  const navigate = useNavigate();
+
+  const handleEnrollClick = () => {
+    navigate('/join-us');
+  };
   const programs = [
     {
       id: 1,
@@ -99,15 +104,8 @@ const Programs = () => {
                     </ul>
                   </div>
 
-                  <button className="enroll-btn">
-                    <a 
-                      href="https://www.saylanimit.com/enroll" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      style={{ color: 'inherit', textDecoration: 'none' }}
-                    >
-                      Enroll Now
-                    </a>
+                  <button className="enroll-btn" onClick={handleEnrollClick}>
+                    Enroll Now
                   </button>
                 </div>
               ))}

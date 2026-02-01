@@ -147,8 +147,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  align-self: flex-end;
-  margin-top: auto;
+  align-self: flex-start;
 }
 
 .enroll-btn:hover {
