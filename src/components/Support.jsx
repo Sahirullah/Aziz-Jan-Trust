@@ -1,6 +1,8 @@
 import './Support.css';
+import { useNavigate } from 'react-router-dom';
 
 const Support = () => {
+  const navigate = useNavigate();
   const supportOptions = [
     {
       id: 1,
@@ -86,17 +88,15 @@ const Support = () => {
                 
                 <div className="support-action">
                   <div className="support-buttons">
-                    <a 
-                      href="https://chat.whatsapp.com/LRgagp3fuaM1hk8261RiCy"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button 
+                      onClick={() => navigate('/contact')}
                       className="support-btn secondary"
                     >
                       Get Started
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M7 17l9.2-9.2M17 17V7H7"/>
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
