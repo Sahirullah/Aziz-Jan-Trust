@@ -1,7 +1,9 @@
-import React from 'react';
+import { useState } from 'react';
 import './Categories.css';
 
 const Categories = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const categories = [
     {
       id: 1,
@@ -69,6 +71,8 @@ const Categories = () => {
     }
   ];
 
+  const displayedCategories = showAll ? categories : categories.slice(0, 6);
+
   return (
     <section className="categories">
       <div className="categories-container">
@@ -80,7 +84,7 @@ const Categories = () => {
         </div>
         
         <div className="categories-grid">
-          {categories.map((category) => (
+          {displayedCategories.map((category) => (
             <div key={category.id} className="category-card">
               <div className="category-icon" style={{ backgroundColor: category.color }}>
                 <span>{category.icon}</span>
@@ -96,8 +100,8 @@ const Categories = () => {
         </div>
         
         <div className="categories-footer">
-          <button className="view-all-btn">
-            Explore All Courses
+          <button className="view-all-btn" onClick={() => setShowAll(!showAll)}>
+            {showAll ? 'Show Less' : 'Explore All Courses'}
             <span className="btn-arrow">→</span>
           </button>
         </div>
