@@ -130,31 +130,36 @@
   position: relative;
 }
 
-.why-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #FF741F, #ff8c42);
-  border-radius: 16px 16px 0 0;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
 .why-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.why-card:hover::before {
-  transform: scaleX(1);
-}
-
 .why-icon {
   font-size: 48px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, rgba(255, 116, 31, 0.1), rgba(255, 140, 66, 0.05));
+  border-radius: 16px;
+  color: #FF741F;
+  transition: all 0.3s ease;
+}
+
+.why-icon svg {
+  width: 48px;
+  height: 48px;
+  stroke: currentColor;
+}
+
+.why-card:hover .why-icon {
+  background: linear-gradient(135deg, rgba(255, 116, 31, 0.2), rgba(255, 140, 66, 0.1));
+  transform: scale(1.1);
 }
 
 .why-card h3 {

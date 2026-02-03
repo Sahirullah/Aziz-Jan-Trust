@@ -38,22 +38,43 @@ const JoinUs = () => {
             </p>
             <div className="why-grid">
               <div className="why-card">
-                <div className="why-icon">🎓</div>
+                <div className="why-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 10v6m0 0a8 8 0 01-15.5-1m0 0a8 8 0 1115.5 1m0 0H2m0 0a8 8 0 0015.5-1m0 0a8 8 0 01-15.5 1" />
+                    <path d="M12 14a2 2 0 100-4 2 2 0 000 4z" />
+                  </svg>
+                </div>
                 <h3>Quality Education</h3>
                 <p>Free professional training in the latest and most in-demand fields of the digital world.</p>
               </div>
               <div className="why-card">
-                <div className="why-icon">💼</div>
+                <div className="why-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                    <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                  </svg>
+                </div>
                 <h3>Job Ready</h3>
                 <p>Practical skills designed to prepare learners for real-world challenges and employment.</p>
               </div>
               <div className="why-card">
-                <div className="why-icon">🚀</div>
+                <div className="why-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
                 <h3>Career Growth</h3>
                 <p>Become a successful freelancer or land your dream job in the tech industry.</p>
               </div>
               <div className="why-card">
-                <div className="why-icon">🤝</div>
+                <div className="why-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                    <path d="M16 3.13a4 4 0 010 7.75" />
+                  </svg>
+                </div>
                 <h3>Community Support</h3>
                 <p>Join a network of passionate learners and industry professionals.</p>
               </div>
