@@ -116,8 +116,8 @@
 
 .programs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
   animation: fadeIn 0.6s ease-in-out;
 }
 
@@ -134,21 +134,23 @@
 
 /* Program Card */
 .program-card {
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: flex;
   flex-direction: column;
   height: 380px;
   background: #f0f0f0;
   position: relative;
   cursor: pointer;
+  border: 1px solid rgba(0, 146, 223, 0.1);
 }
 
 .program-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 51, 102, 0.2);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 45px rgba(0, 146, 223, 0.25);
+  border-color: rgba(0, 146, 223, 0.3);
 }
 
 .program-image-wrapper {
@@ -158,7 +160,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
   z-index: 0;
 }
 
@@ -166,11 +168,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: brightness(0.95);
 }
 
 .program-card:hover .program-image {
-  transform: scale(1.08);
+  transform: scale(1.12) rotate(1deg);
+  filter: brightness(1.05);
 }
 
 .program-badge {
@@ -188,38 +192,41 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.85) 0%, rgba(255, 165, 0, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(0, 146, 223, 0) 0%, rgba(0, 146, 223, 0.98) 60%, rgba(0, 146, 223, 1) 100%);
   justify-content: flex-end;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .program-card:hover .program-content {
   opacity: 1;
+  background: linear-gradient(180deg, rgba(0, 146, 223, 0) 0%, rgba(0, 146, 223, 0.98) 60%, rgba(0, 146, 223, 1) 100%);
 }
 
 .program-title {
-  color: #333;
-  font-size: 1.35rem;
+  color: #ffffff;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   line-height: 1.3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .program-category {
-  color: #999;
-  font-size: 0.85rem;
-  font-weight: 500;
+  color: #e0f2ff;
+  font-size: 0.8rem;
+  font-weight: 600;
   margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
 .program-description {
-  color: #666;
+  color: #ffffff;
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 20px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .program-status {
@@ -249,7 +256,7 @@
 }
 
 .program-view-btn {
-  background: #ff8c00;
+  background: #0092DF;
   color: white;
   border: none;
   padding: 12px 28px;
@@ -258,39 +265,40 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 146, 223, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .program-view-btn:hover {
   transform: scale(1.05);
-  background: #e67e00;
+  background: #0078b8;
   color: white;
-  box-shadow: 0 6px 16px rgba(255, 140, 0, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 146, 223, 0.4);
 }
 
 .donate-btn {
-  background: #ff8c00;
+  background: linear-gradient(135deg, #0092DF 0%, #0078b8 100%);
   color: white;
-  border: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   padding: 12px 28px;
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 15px rgba(0, 146, 223, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   align-self: center;
 }
 
 .donate-btn:hover {
-  transform: scale(1.05);
-  background: #e67e00;
-  color: white;
-  box-shadow: 0 6px 16px rgba(255, 140, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #FF741F 0%, #ff6b35 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(255, 116, 31, 0.4);
 }
 
 /* CTA Section */

@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="hero-stats">
             <div className="stat">
               <span className="stat-number">10K+</span>
-              <span className="stat-label">Study Materials</span>
+              <span className="stat-label">supported homles</span>
             </div>
             <div className="stat">
               <span className="stat-number">5K+</span>
@@ -36,7 +36,7 @@ const Hero = () => {
             </div>
             <div className="stat">
               <span className="stat-number">50K+</span>
-              <span className="stat-label">Downloads</span>
+              <span className="stat-label">other</span>
             </div>
           </div>
         </div>
