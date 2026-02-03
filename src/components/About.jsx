@@ -8,7 +8,7 @@ const About = () => {
       <div className="about-container">
         <div className="about-content">
           <div className="about-text">
-            <h2 className="about-title">About Aziz Jan Trust</h2>
+            <h2 className="about-title">About Aziz Jan</h2>
             <p className="about-description">
               Aziz Jan Trust is a compassionate organization dedicated to bringing hope to people through education, healthcare, and community development. Founded with a vision to empower underprivileged communities, we have been serving thousands of families across multiple regions for over 15 years.
             </p>

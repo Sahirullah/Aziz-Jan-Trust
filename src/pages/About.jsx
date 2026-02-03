@@ -72,25 +72,27 @@ const About = () => {
           </div>
         </section>
 
-        {/* Mission & Vision Section */}
-        <section className="about-mission-vision">
+        {/* About Aziz Jan Section */}
+        <section className="about-aziz-jan">
           <div className="about-container">
-            <div className="mission-vision-grid">
-              <div className="mission-vision-card">
-                <div className="card-icon">🎯</div>
-                <h3 className="card-title">Our Mission</h3>
-                <p className="card-text">
-                  To empower underprivileged communities through quality education, accessible healthcare, 
-                  and sustainable development initiatives that create lasting positive change in society.
+            <div className="aziz-jan-content">
+              <div className="aziz-jan-text">
+                <h2 className="aziz-jan-title">About Aziz Jan</h2>
+                <p className="aziz-jan-paragraph">
+                  Aziz Jan Trust is a compassionate organization dedicated to bringing hope to people 
+                  through education, healthcare, and community development. Founded with a vision to 
+                  empower underprivileged communities, we have been serving thousands of families across 
+                  multiple regions for over 15 years.
+                </p>
+                <p className="aziz-jan-paragraph">
+                  Our mission is to bridge the gap between privileged and underprivileged communities 
+                  by providing quality education, accessible healthcare, and sustainable development 
+                  initiatives. We believe that every individual deserves the opportunity to reach their 
+                  full potential, regardless of their economic background.
                 </p>
               </div>
-              <div className="mission-vision-card">
-                <div className="card-icon">🌟</div>
-                <h3 className="card-title">Our Vision</h3>
-                <p className="card-text">
-                  A society where every individual has access to quality education and healthcare, 
-                  regardless of their economic background, enabling them to reach their full potential.
-                </p>
+              <div className="aziz-jan-image">
+                <img src={instructor1} alt="Aziz Jan Trust Community" className="aziz-jan-img" />
               </div>
             </div>
           </div>
@@ -116,33 +118,6 @@ const About = () => {
               <div className="impact-stat">
                 <div className="impact-number">15+</div>
                 <div className="impact-label">Years of Service</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Story Section */}
-        <section className="about-story">
-          <div className="about-container">
-            <h2 className="section-title">Our Story</h2>
-            <div className="story-content">
-              <div className="story-text">
-                <p>
-                  Aziz Jan Trust was founded with a simple yet powerful vision: to bring hope to people 
-                  through education, healthcare, and community development. What began as a grassroots 
-                  initiative has evolved into a comprehensive organization serving thousands of families 
-                  across multiple regions.
-                </p>
-                <p>
-                  Named after the spirit of generosity and compassion, our organization has consistently 
-                  worked to bridge the gap between privileged and underprivileged communities. We believe 
-                  that education is the foundation of progress, healthcare is a fundamental right, and 
-                  community development is the key to sustainable change.
-                </p>
-                <p>
-                  Today, we continue our mission with unwavering commitment, supported by dedicated staff, 
-                  passionate volunteers, and generous donors who share our vision of a more equitable society.
-                </p>
               </div>
             </div>
           </div>
