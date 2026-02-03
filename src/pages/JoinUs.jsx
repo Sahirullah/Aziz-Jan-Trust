@@ -92,30 +92,58 @@ const JoinUs = () => {
             <div className="courses-grid">
               <div className="course-card">
                 <div className="course-number">01</div>
-                <h3 className="course-title">Web & App Development</h3>
-                <p className="course-description">
-                  Master modern web technologies and mobile app development to build scalable applications.
-                </p>
-              </div>
-              <div className="course-card">
-                <div className="course-number">02</div>
-                <h3 className="course-title">Agentic AI</h3>
-                <p className="course-description">
-                  Learn cutting-edge AI technologies and build intelligent systems for the future.
-                </p>
-              </div>
-              <div className="course-card">
-                <div className="course-number">03</div>
                 <h3 className="course-title">Video Editing</h3>
                 <p className="course-description">
                   Develop professional video editing skills for content creation and media production.
                 </p>
               </div>
               <div className="course-card">
-                <div className="course-number">04</div>
-                <h3 className="course-title">Freelancing & Digital Skills</h3>
+                <div className="course-number">02</div>
+                <h3 className="course-title">Graphic Design</h3>
                 <p className="course-description">
-                  Build a successful freelance career with in-demand digital marketing and business skills.
+                  Master visual design principles and create stunning graphics for digital and print media.
+                </p>
+              </div>
+              <div className="course-card">
+                <div className="course-number">03</div>
+                <h3 className="course-title">English Language</h3>
+                <p className="course-description">
+                  Enhance your English communication skills for professional and academic success.
+                </p>
+              </div>
+              <div className="course-card">
+                <div className="course-number">04</div>
+                <h3 className="course-title">Python Programming</h3>
+                <p className="course-description">
+                  Learn Python programming fundamentals and build powerful applications and automation tools.
+                </p>
+              </div>
+              <div className="course-card">
+                <div className="course-number">05</div>
+                <h3 className="course-title">Video Content Creation with AI</h3>
+                <p className="course-description">
+                  Create engaging video content using AI tools and modern production techniques.
+                </p>
+              </div>
+              <div className="course-card">
+                <div className="course-number">06</div>
+                <h3 className="course-title">Cyber Security</h3>
+                <p className="course-description">
+                  Master cybersecurity principles and protect systems from digital threats and vulnerabilities.
+                </p>
+              </div>
+              <div className="course-card">
+                <div className="course-number">07</div>
+                <h3 className="course-title">Agentic AI</h3>
+                <p className="course-description">
+                  Learn cutting-edge AI technologies and build intelligent systems for the future.
+                </p>
+              </div>
+              <div className="course-card">
+                <div className="course-number">08</div>
+                <h3 className="course-title">Web & App Development</h3>
+                <p className="course-description">
+                  Master modern web technologies and mobile app development to build scalable applications.
                 </p>
               </div>
             </div>
