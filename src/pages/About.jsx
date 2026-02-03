@@ -172,43 +172,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Values Section */}
-        <section className="about-values">
-          <div className="about-container">
-            <h2 className="section-title">Our Core Values</h2>
-            <div className="values-grid">
-              <div className="value-card">
-                <div className="value-number">01</div>
-                <h3 className="value-title">Compassion</h3>
-                <p className="value-description">
-                  We approach every individual with empathy and genuine care for their wellbeing.
-                </p>
-              </div>
-              <div className="value-card">
-                <div className="value-number">02</div>
-                <h3 className="value-title">Integrity</h3>
-                <p className="value-description">
-                  We operate with transparency and accountability in all our endeavors.
-                </p>
-              </div>
-              <div className="value-card">
-                <div className="value-number">03</div>
-                <h3 className="value-title">Excellence</h3>
-                <p className="value-description">
-                  We strive for the highest standards in all our programs and services.
-                </p>
-              </div>
-              <div className="value-card">
-                <div className="value-number">04</div>
-                <h3 className="value-title">Sustainability</h3>
-                <p className="value-description">
-                  We create long-term solutions that empower communities to thrive independently.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Leadership Section */}
         <section className="about-leadership">
           <div className="about-container">
