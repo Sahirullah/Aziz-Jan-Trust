@@ -266,26 +266,9 @@
   position: relative;
 }
 
-.program-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #FF741F, #ff8c42);
-  border-radius: 16px 16px 0 0;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
 .program-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-
-.program-card:hover::before {
-  transform: scaleX(1);
 }
 
 .program-icon {
@@ -570,7 +553,7 @@
 
 /* CTA Section */
 .about-cta {
-  padding: 100px 0;
+  padding: 120px 0;
   background: linear-gradient(135deg, #FF741F 0%, #ff8c42 100%);
   color: white;
   position: relative;
@@ -588,26 +571,40 @@
   opacity: 0.3;
 }
 
+.about-cta::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
 .cta-content {
   text-align: center;
   position: relative;
   z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .cta-title {
-  font-size: 44px;
+  font-size: 52px;
   font-weight: 800;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+  letter-spacing: -1px;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .cta-description {
   font-size: 20px;
   opacity: 0.95;
-  margin-bottom: 50px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 60px;
   line-height: 1.8;
+  animation: fadeInUp 0.8s ease-out 0.1s both;
 }
 
 .cta-buttons {
@@ -615,10 +612,11 @@
   gap: 24px;
   justify-content: center;
   flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .cta-button {
-  padding: 18px 40px;
+  padding: 16px 48px;
   border-radius: 50px;
   font-size: 16px;
   font-weight: 600;
@@ -627,28 +625,59 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.cta-button:hover::before {
+  left: 100%;
 }
 
 .cta-button.primary {
   background: white;
   color: #FF741F;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .cta-button.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
 }
 
 .cta-button.secondary {
   background: transparent;
   color: white;
   border: 2px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button.secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
