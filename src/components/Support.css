@@ -440,3 +440,64 @@
     font-size: 12px;
   }
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .support {
+  background: linear-gradient(135deg, rgba(255, 116, 31, 0.08) 0%, rgba(255, 140, 66, 0.1) 100%);
+}
+
+.dark-mode .support-title {
+  color: #f7fafc;
+}
+
+.dark-mode .support-subtitle {
+  color: #cbd5e0;
+}
+
+.dark-mode .support-card {
+  background: #2d3748;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .support-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .support-title-card {
+  color: #f7fafc;
+}
+
+.dark-mode .support-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .feature-text {
+  color: #cbd5e0;
+}
+
+.dark-mode .support-btn.secondary {
+  color: var(--support-color);
+  border-color: var(--support-color);
+}
+
+.dark-mode .support-btn.secondary:hover {
+  background: var(--support-color);
+  color: white;
+}
+
+.dark-mode .support-stats {
+  background: #2d3748;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .stat-number {
+  color: #FF741F;
+}
+
+.dark-mode .stat-label {
+  color: #cbd5e0;
+}

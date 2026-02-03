@@ -515,3 +515,285 @@
     font-size: 28px;
   }
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .joinus-page {
+  background: #1a202c;
+}
+
+.dark-mode .joinus-opportunity {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .opportunity-text {
+  color: #cbd5e0;
+}
+
+.dark-mode .opportunity-highlight {
+  background: #2d3748;
+  border-left-color: #FF741F;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .opportunity-highlight h3 {
+  color: #f7fafc;
+}
+
+.dark-mode .opportunity-highlight p {
+  color: #a0aec0;
+}
+
+.dark-mode .section-title {
+  color: #f7fafc;
+}
+
+.dark-mode .section-subtitle {
+  color: #cbd5e0;
+}
+
+.dark-mode .joinus-why {
+  background: #2d3748;
+}
+
+.dark-mode .why-card {
+  background: #1a202c;
+  border-color: rgba(255, 116, 31, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .why-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .why-icon {
+  background: linear-gradient(135deg, rgba(255, 116, 31, 0.15), rgba(255, 140, 66, 0.08));
+  color: #FF741F;
+}
+
+.dark-mode .why-card h3 {
+  color: #f7fafc;
+}
+
+.dark-mode .why-card p {
+  color: #cbd5e0;
+}
+
+.dark-mode .joinus-courses {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .course-card {
+  background: #2d3748;
+  border-color: rgba(255, 116, 31, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .course-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .course-card::before {
+  background: linear-gradient(135deg, rgba(255, 116, 31, 0.15), transparent);
+}
+
+.dark-mode .course-number {
+  color: rgba(255, 116, 31, 0.3);
+}
+
+.dark-mode .course-title {
+  color: #f7fafc;
+}
+
+.dark-mode .course-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .joinus-apply {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .apply-content .section-title {
+  color: #f7fafc;
+}
+
+.dark-mode .apply-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .apply-note {
+  color: #a0aec0;
+}
+
+.dark-mode .apply-img {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .joinus-cta {
+  background: linear-gradient(135deg, #0f1419 0%, #1a202c 100%);
+}
+
+.dark-mode .cta-title {
+  color: #f7fafc;
+}
+
+.dark-mode .cta-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-mode .cta-button.primary {
+  background: linear-gradient(135deg, #FF741F 0%, #ff8c42 100%);
+  box-shadow: 0 4px 15px rgba(255, 116, 31, 0.4);
+}
+
+.dark-mode .cta-button.primary:hover {
+  box-shadow: 0 8px 25px rgba(255, 116, 31, 0.5);
+}
+
+.dark-mode .cta-button.secondary {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.dark-mode .cta-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .joinus-page {
+  background: #1a202c;
+}
+
+.dark-mode .joinus-main {
+  background: #1a202c;
+}
+
+.dark-mode .joinus-opportunity {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .opportunity-text {
+  color: #cbd5e0;
+}
+
+.dark-mode .opportunity-highlight {
+  background: #2d3748;
+  border-left-color: #FF741F;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .opportunity-highlight h3 {
+  color: #f7fafc;
+}
+
+.dark-mode .opportunity-highlight p {
+  color: #a0aec0;
+}
+
+.dark-mode .section-title {
+  color: #f7fafc;
+}
+
+.dark-mode .section-subtitle {
+  color: #cbd5e0;
+}
+
+.dark-mode .joinus-why {
+  background: #2d3748;
+}
+
+.dark-mode .why-card {
+  background: #1a202c;
+  border-color: rgba(255, 116, 31, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .why-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .why-icon {
+  background: linear-gradient(135deg, rgba(255, 116, 31, 0.15), rgba(255, 140, 66, 0.08));
+  color: #FF741F;
+}
+
+.dark-mode .why-card h3 {
+  color: #f7fafc;
+}
+
+.dark-mode .why-card p {
+  color: #cbd5e0;
+}
+
+.dark-mode .joinus-courses {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .course-card {
+  background: #2d3748;
+  border-color: rgba(255, 116, 31, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .course-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .course-card::before {
+  background: linear-gradient(135deg, rgba(255, 116, 31, 0.15), transparent);
+}
+
+.dark-mode .course-number {
+  color: rgba(255, 116, 31, 0.3);
+}
+
+.dark-mode .course-title {
+  color: #f7fafc;
+}
+
+.dark-mode .course-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .joinus-apply {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .apply-content .section-title {
+  color: #f7fafc;
+}
+
+.dark-mode .apply-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .apply-note {
+  color: #a0aec0;
+}
+
+.dark-mode .apply-img {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .joinus-cta {
+  background: linear-gradient(135deg, #0f1419 0%, #1a202c 100%);
+}
+
+.dark-mode .cta-title {
+  color: white;
+}
+
+.dark-mode .cta-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-mode .cta-button.secondary {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.dark-mode .cta-button.secondary:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}

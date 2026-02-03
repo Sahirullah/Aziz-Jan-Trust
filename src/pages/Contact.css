@@ -690,3 +690,186 @@
   content: "✅";
   font-size: 1rem;
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .contact-page {
+  background: #1a202c;
+}
+
+.dark-mode .contact-info-section {
+  background: #2d3748;
+}
+
+.dark-mode .contact-card {
+  background: #2d3748;
+  border-color: rgba(255, 116, 31, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .contact-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .contact-card h3 {
+  color: #f7fafc;
+}
+
+.dark-mode .contact-card p {
+  color: #cbd5e0;
+}
+
+.dark-mode .contact-link {
+  color: #FF741F;
+}
+
+.dark-mode .contact-link:hover {
+  color: #ff8c42;
+}
+
+.dark-mode .contact-form-section {
+  background: #1a202c;
+}
+
+.dark-mode .form-wrapper {
+  background: #2d3748;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .form-header h2 {
+  color: #f7fafc;
+}
+
+.dark-mode .form-header p {
+  color: #cbd5e0;
+}
+
+.dark-mode .form-group label {
+  color: #f7fafc;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select,
+.dark-mode .form-group textarea {
+  background: #1a202c;
+  border-color: rgba(255, 116, 31, 0.2);
+  color: #f7fafc;
+}
+
+.dark-mode .form-group input::placeholder,
+.dark-mode .form-group textarea::placeholder {
+  color: #a0aec0;
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group select:focus,
+.dark-mode .form-group textarea:focus {
+  background: #2d3748;
+  border-color: #FF741F;
+  box-shadow: 0 0 0 3px rgba(255, 116, 31, 0.2);
+}
+
+.dark-mode .form-status.success {
+  background: rgba(72, 187, 120, 0.2);
+  color: #9ae6b4;
+  border-color: rgba(72, 187, 120, 0.4);
+}
+
+.dark-mode .form-status.error {
+  background: rgba(229, 62, 62, 0.2);
+  color: #fc8181;
+  border-color: rgba(229, 62, 62, 0.4);
+}
+
+.dark-mode .field-error {
+  color: #fc8181;
+}
+
+.dark-mode .form-group input.error,
+.dark-mode .form-group select.error,
+.dark-mode .form-group textarea.error {
+  border-color: #fc8181;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.2);
+}
+
+.dark-mode .form-group input.error:focus,
+.dark-mode .form-group select.error:focus,
+.dark-mode .form-group textarea.error:focus {
+  border-color: #fc8181;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.3);
+}
+
+.dark-mode .quick-links-section {
+  background: #2d3748;
+}
+
+.dark-mode .quick-links-section h2 {
+  color: #f7fafc;
+}
+
+.dark-mode .quick-link-card {
+  background: #1a202c;
+  border-color: rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .quick-link-card:hover {
+  background: #2d3748;
+  border-color: #FF741F;
+}
+
+.dark-mode .quick-link-card h3 {
+  color: #f7fafc;
+}
+
+.dark-mode .quick-link-card p {
+  color: #cbd5e0;
+}
+
+.dark-mode .map-section {
+  background: #2d3748;
+}
+
+.dark-mode .map-header h2 {
+  color: #f7fafc;
+}
+
+.dark-mode .map-header p {
+  color: #cbd5e0;
+}
+
+.dark-mode .map-container {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .faq-section {
+  background: #1a202c;
+}
+
+.dark-mode .faq-section h2 {
+  color: #f7fafc;
+}
+
+.dark-mode .faq-item {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .faq-question {
+  color: #cbd5e0;
+}
+
+.dark-mode .faq-question:hover {
+  color: #FF741F;
+}
+
+.dark-mode .faq-icon {
+  color: #a0aec0;
+}
+
+.dark-mode .faq-question.active .faq-icon {
+  color: #FF741F;
+}
+
+.dark-mode .faq-answer p {
+  color: #cbd5e0;
+}

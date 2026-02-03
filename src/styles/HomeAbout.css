@@ -232,3 +232,43 @@
     margin-left: 10px;
   }
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .home-about-section {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .about-title {
+  background: linear-gradient(135deg, #f7fafc 0%, #cbd5e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark-mode .about-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .highlight-item {
+  background: linear-gradient(135deg, rgba(0, 146, 223, 0.15) 0%, rgba(0, 146, 223, 0.08) 100%);
+  border-left-color: #FF741F;
+}
+
+.dark-mode .highlight-item:hover {
+  background: linear-gradient(135deg, rgba(0, 146, 223, 0.2) 0%, rgba(0, 146, 223, 0.12) 100%);
+  box-shadow: 0 8px 20px rgba(0, 146, 223, 0.25);
+}
+
+.dark-mode .highlight-number {
+  color: #FF741F;
+}
+
+.dark-mode .highlight-label {
+  color: #a0aec0;
+}
+
+.dark-mode .about-image {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}

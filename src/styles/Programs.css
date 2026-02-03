@@ -545,3 +545,67 @@
     font-size: 12px;
   }
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .programs-page {
+  background: #1a202c;
+}
+
+.dark-mode .programs-main {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .hero-content h1 {
+  background: linear-gradient(135deg, #f7fafc 0%, #cbd5e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark-mode .hero-content p {
+  color: #cbd5e0;
+}
+
+.dark-mode .program-card {
+  background: #2d3748;
+  border-color: rgba(255, 116, 31, 0.15);
+}
+
+.dark-mode .program-card:hover {
+  box-shadow: 0 25px 50px rgba(0, 146, 223, 0.2);
+  border-color: rgba(255, 116, 31, 0.3);
+}
+
+.dark-mode .program-title {
+  color: #f7fafc;
+}
+
+.dark-mode .program-category {
+  color: #90cdf4;
+}
+
+.dark-mode .program-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .program-content {
+  background: linear-gradient(180deg, rgba(0, 146, 223, 0) 0%, rgba(45, 55, 72, 0.95) 50%, rgba(45, 55, 72, 1) 100%);
+}
+
+.dark-mode .program-card:hover .program-content {
+  background: linear-gradient(180deg, rgba(0, 146, 223, 0) 0%, rgba(45, 55, 72, 0.98) 50%, rgba(45, 55, 72, 1) 100%);
+}
+
+.dark-mode .programs-cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.dark-mode .cta-content h2 {
+  color: white;
+}
+
+.dark-mode .cta-content p {
+  color: rgba(255, 255, 255, 0.95);
+}

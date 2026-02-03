@@ -490,3 +490,73 @@
     padding: 5px 12px;
   }
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .gallery-page {
+  background: #1a202c;
+}
+
+.dark-mode .gallery-section {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .gallery-title {
+  background: linear-gradient(135deg, #f7fafc 0%, #cbd5e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark-mode .gallery-subtitle {
+  color: #cbd5e0;
+}
+
+.dark-mode .gallery-item {
+  background: #2d3748;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .gallery-item:hover {
+  box-shadow: 0 12px 28px rgba(0, 146, 223, 0.3);
+}
+
+.dark-mode .view-btn {
+  background: #2d3748;
+  color: #90cdf4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .view-btn:hover {
+  background: #90cdf4;
+  color: #1a202c;
+  box-shadow: 0 6px 16px rgba(0, 146, 223, 0.4);
+}
+
+.dark-mode .lightbox {
+  background: rgba(0, 0, 0, 0.98);
+}
+
+.dark-mode .lightbox-image {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode .lightbox-close,
+.dark-mode .lightbox-prev,
+.dark-mode .lightbox-next {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .lightbox-close:hover,
+.dark-mode .lightbox-prev:hover,
+.dark-mode .lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.dark-mode .lightbox-counter {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #f7fafc;
+}

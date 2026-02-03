@@ -294,3 +294,64 @@
     font-size: 1rem;
   }
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .courses-page {
+  background: #1a202c;
+}
+
+.dark-mode .courses-main {
+  background: #1a202c;
+}
+
+.dark-mode .courses-hero {
+  color: #f7fafc;
+}
+
+.dark-mode .courses-hero .hero-content h1 {
+  color: #f7fafc;
+}
+
+.dark-mode .courses-hero .hero-content p {
+  color: #cbd5e0;
+}
+
+.dark-mode .course-card {
+  background: #2d3748;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .course-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .course-content h3 {
+  color: #FF741F;
+}
+
+.dark-mode .course-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .courses-cta {
+  background: linear-gradient(135deg, #FF741F 0%, #FF8C42 100%);
+}
+
+.dark-mode .cta-content h2 {
+  color: white;
+}
+
+.dark-mode .cta-content p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.dark-mode .cta-btn {
+  background: white;
+  color: #FF741F;
+}
+
+.dark-mode .cta-btn:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}

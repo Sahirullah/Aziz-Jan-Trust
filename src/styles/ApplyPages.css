@@ -193,3 +193,121 @@
     font-size: 16px;
   }
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .apply-page {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .apply-container {
+  background: #2d3748;
+  color: #f7fafc;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .apply-header h1 {
+  color: #f7fafc;
+}
+
+.dark-mode .apply-header p {
+  color: #cbd5e0;
+}
+
+.dark-mode .form-group label {
+  color: #f7fafc;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select,
+.dark-mode .form-group textarea {
+  background: #1a202c;
+  color: #f7fafc;
+  border-color: rgba(255, 116, 31, 0.2);
+}
+
+.dark-mode .form-group input::placeholder,
+.dark-mode .form-group textarea::placeholder {
+  color: #a0aec0;
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group select:focus,
+.dark-mode .form-group textarea:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.dark-mode .success-message {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #9ae6b4;
+  border-left-color: #48bb78;
+}
+
+.dark-mode .submit-btn {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+}
+
+.dark-mode .submit-btn:hover {
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+}
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .apply-page {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .apply-container {
+  background: #2d3748;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .apply-header h1 {
+  color: #f7fafc;
+}
+
+.dark-mode .apply-header p {
+  color: #cbd5e0;
+}
+
+.dark-mode .success-message {
+  background-color: rgba(72, 187, 120, 0.2);
+  color: #9ae6b4;
+  border-left-color: #48bb78;
+}
+
+.dark-mode .form-group label {
+  color: #f7fafc;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select,
+.dark-mode .form-group textarea {
+  background: #1a202c;
+  color: #f7fafc;
+  border-color: rgba(255, 116, 31, 0.2);
+}
+
+.dark-mode .form-group input::placeholder,
+.dark-mode .form-group textarea::placeholder {
+  color: #a0aec0;
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group select:focus,
+.dark-mode .form-group textarea:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.dark-mode .submit-btn {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.dark-mode .submit-btn:hover {
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+}

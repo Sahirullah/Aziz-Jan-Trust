@@ -783,3 +783,337 @@
     font-size: 18px;
   }
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .presence-page {
+  background: #1a202c;
+}
+
+.dark-mode .presence-hero {
+  background: linear-gradient(135deg, rgba(255, 116, 31, 0.85) 0%, rgba(229, 62, 62, 0.85) 100%);
+}
+
+.dark-mode .presence-hero-title {
+  color: #FFD700;
+}
+
+.dark-mode .presence-hero-subtitle {
+  color: #FFF8DC;
+}
+
+.dark-mode .presence-content {
+  background: #2d3748;
+}
+
+.dark-mode .content-text {
+  color: #cbd5e0;
+}
+
+.dark-mode .content-text h2 {
+  color: #f7fafc;
+}
+
+.dark-mode .content-text h3 {
+  color: #FF741F;
+}
+
+.dark-mode .content-text p {
+  color: #cbd5e0;
+}
+
+.dark-mode .content-text strong {
+  color: #f7fafc;
+}
+
+.dark-mode .pakistan-section {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .international-section {
+  background: #2d3748;
+}
+
+.dark-mode .section-title {
+  color: #f7fafc;
+}
+
+.dark-mode .section-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .city-card {
+  background: #1a202c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .city-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .city-name {
+  color: #f7fafc;
+}
+
+.dark-mode .city-region {
+  color: #a0aec0;
+}
+
+.dark-mode .city-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .status-badge.active {
+  background: rgba(72, 187, 120, 0.2);
+  color: #9ae6b4;
+}
+
+.dark-mode .country-card {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .country-card:hover {
+  background: #2d3748;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .country-name {
+  color: #f7fafc;
+}
+
+.dark-mode .country-region {
+  color: #a0aec0;
+}
+
+.dark-mode .country-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .presence-stats {
+  background: linear-gradient(135deg, #FF741F 0%, #e53e3e 100%);
+}
+
+.dark-mode .stat-box {
+  color: white;
+}
+
+.dark-mode .stat-number {
+  color: #FFD700;
+}
+
+.dark-mode .stat-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-mode .presence-cta {
+  background: #2d3748;
+}
+
+.dark-mode .cta-title {
+  color: #f7fafc;
+}
+
+.dark-mode .cta-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .cta-button {
+  background: linear-gradient(135deg, #FF741F 0%, #e53e3e 100%);
+  box-shadow: 0 4px 15px rgba(255, 116, 31, 0.3);
+}
+
+.dark-mode .cta-button:hover {
+  box-shadow: 0 10px 25px rgba(255, 116, 31, 0.4);
+}
+
+.dark-mode .headquarters-section {
+  background: #2d3748;
+}
+
+.dark-mode .headquarters-text h2 {
+  color: #f7fafc;
+}
+
+.dark-mode .location-info {
+  color: #FF741F;
+}
+
+.dark-mode .headquarters-text p {
+  color: #cbd5e0;
+}
+
+.dark-mode .feature {
+  background: #1a202c;
+  color: #f7fafc;
+  border: 1px solid rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .headquarters-image {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .presence-page {
+  background: #1a202c;
+}
+
+.dark-mode .presence-hero {
+  background: linear-gradient(135deg, rgba(255, 116, 31, 0.85) 0%, rgba(229, 62, 62, 0.85) 100%);
+}
+
+.dark-mode .presence-hero-title {
+  color: #FFD700;
+}
+
+.dark-mode .presence-hero-subtitle {
+  color: #FFF8DC;
+}
+
+.dark-mode .presence-content {
+  background: #2d3748;
+}
+
+.dark-mode .content-text {
+  color: #cbd5e0;
+}
+
+.dark-mode .content-text h2 {
+  color: #f7fafc;
+}
+
+.dark-mode .content-text h3 {
+  color: #FF741F;
+}
+
+.dark-mode .content-text p {
+  color: #cbd5e0;
+}
+
+.dark-mode .content-text strong {
+  color: #f7fafc;
+}
+
+.dark-mode .pakistan-section {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .international-section {
+  background: #2d3748;
+}
+
+.dark-mode .section-title {
+  color: #f7fafc;
+}
+
+.dark-mode .section-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .city-card {
+  background: #1a202c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .city-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .city-name {
+  color: #f7fafc;
+}
+
+.dark-mode .city-region {
+  color: #a0aec0;
+}
+
+.dark-mode .city-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .country-card {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .country-card:hover {
+  background: #2d3748;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .country-name {
+  color: #f7fafc;
+}
+
+.dark-mode .country-region {
+  color: #a0aec0;
+}
+
+.dark-mode .country-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .presence-stats {
+  background: linear-gradient(135deg, #FF741F 0%, #e53e3e 100%);
+}
+
+.dark-mode .stat-box {
+  color: white;
+}
+
+.dark-mode .stat-number {
+  color: #FFD700;
+}
+
+.dark-mode .stat-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-mode .presence-cta {
+  background: #2d3748;
+}
+
+.dark-mode .cta-title {
+  color: #f7fafc;
+}
+
+.dark-mode .cta-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .headquarters-section {
+  background: #2d3748;
+}
+
+.dark-mode .headquarters-text h2 {
+  color: #f7fafc;
+}
+
+.dark-mode .location-info {
+  color: #FF741F;
+}
+
+.dark-mode .headquarters-text p {
+  color: #cbd5e0;
+}
+
+.dark-mode .feature {
+  background: #1a202c;
+  color: #f7fafc;
+  border: 1px solid rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .feature-icon {
+  color: #FF741F;
+}
+
+.dark-mode .image-placeholder {
+  background: linear-gradient(135deg, #FF741F 0%, #e53e3e 100%);
+}
+
+.dark-mode .placeholder-text {
+  color: white;
+}

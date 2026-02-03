@@ -1124,3 +1124,234 @@
     font-size: 12px;
   }
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .about-page {
+  background: #1a202c;
+  color: #f7fafc;
+}
+
+.dark-mode .about-hero {
+  color: #f7fafc;
+}
+
+.dark-mode .about-hero-title {
+  color: #f7fafc;
+}
+
+.dark-mode .about-hero-subtitle {
+  color: #cbd5e0;
+}
+
+.dark-mode .about-aziz-jan {
+  background: #2d3748;
+}
+
+.dark-mode .aziz-jan-title {
+  color: #f7fafc;
+}
+
+.dark-mode .aziz-jan-paragraph {
+  color: #cbd5e0;
+}
+
+.dark-mode .aziz-jan-img {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .about-impact {
+  background: linear-gradient(135deg, #1a202c 0%, #0f1419 100%);
+}
+
+.dark-mode .about-impact .section-title {
+  color: #f7fafc;
+}
+
+.dark-mode .impact-stat {
+  background: rgba(255, 116, 31, 0.08);
+  border-color: rgba(255, 116, 31, 0.3);
+}
+
+.dark-mode .impact-stat:hover {
+  background: rgba(255, 116, 31, 0.15);
+}
+
+.dark-mode .impact-number {
+  color: #FF741F;
+}
+
+.dark-mode .impact-label {
+  color: #e2e8f0;
+}
+
+.dark-mode .section-title {
+  color: #f7fafc;
+}
+
+.dark-mode .about-story {
+  background: #2d3748;
+}
+
+.dark-mode .story-text p {
+  color: #cbd5e0;
+}
+
+.dark-mode .about-programs {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .program-card {
+  background: #2d3748;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .program-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .program-title {
+  color: #f7fafc;
+}
+
+.dark-mode .program-description {
+  color: #90cdf4;
+}
+
+.dark-mode .about-values {
+  background: #2d3748;
+}
+
+.dark-mode .value-card {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  border-color: rgba(255, 116, 31, 0.2);
+}
+
+.dark-mode .value-card:hover {
+  box-shadow: 0 20px 50px rgba(255, 116, 31, 0.2);
+  border-color: rgba(255, 116, 31, 0.4);
+}
+
+.dark-mode .value-number {
+  color: #FF741F;
+}
+
+.dark-mode .value-title {
+  color: #f7fafc;
+}
+
+.dark-mode .value-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .about-leadership {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .leadership-description {
+  color: #cbd5e0;
+}
+
+.dark-mode .carousel-arrow {
+  background: linear-gradient(135deg, #FF741F 0%, #ff8c42 100%);
+  box-shadow: 0 4px 15px rgba(255, 116, 31, 0.4);
+}
+
+.dark-mode .carousel-arrow:hover {
+  box-shadow: 0 8px 25px rgba(255, 116, 31, 0.5);
+}
+
+.dark-mode .leadership-carousel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .leadership-carousel::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #FF741F 0%, #ff8c42 100%);
+}
+
+.dark-mode .leadership-card {
+  background: #2d3748;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .leadership-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .leader-image-container {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.dark-mode .position-label {
+  background: #2d3748;
+  color: #f7fafc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .leader-name {
+  color: #f7fafc;
+}
+
+.dark-mode .leader-role {
+  color: #FF741F;
+}
+
+.dark-mode .leader-bio {
+  color: #cbd5e0;
+}
+
+.dark-mode .leadership-member {
+  background: #2d3748;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .leadership-member:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .member-name {
+  color: #f7fafc;
+}
+
+.dark-mode .member-role {
+  color: #FF741F;
+}
+
+.dark-mode .member-bio {
+  color: #cbd5e0;
+}
+
+.dark-mode .about-cta {
+  background: linear-gradient(135deg, #FF741F 0%, #ff8c42 100%);
+}
+
+.dark-mode .cta-title {
+  color: white;
+}
+
+.dark-mode .cta-description {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.dark-mode .cta-button.primary {
+  background: white;
+  color: #FF741F;
+}
+
+.dark-mode .cta-button.primary:hover {
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .cta-button.secondary {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.dark-mode .cta-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}

@@ -573,3 +573,120 @@
     font-size: 15px;
   }
 }
+
+
+/* ===== DARK MODE STYLES ===== */
+
+.dark-mode .reviews {
+  background: linear-gradient(135deg, rgba(255, 116, 31, 0.08) 0%, rgba(255, 140, 66, 0.1) 100%);
+}
+
+.dark-mode .reviews-title {
+  color: #f7fafc;
+}
+
+.dark-mode .reviews-subtitle {
+  color: #cbd5e0;
+}
+
+.dark-mode .reviews-stats {
+  background: #2d3748;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .stat-number {
+  color: #FF741F;
+}
+
+.dark-mode .stat-label {
+  color: #cbd5e0;
+}
+
+.dark-mode .star.empty {
+  color: #4a5568;
+}
+
+.dark-mode .review-card {
+  background: #2d3748;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .review-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .reviewer-name {
+  color: #f7fafc;
+}
+
+.dark-mode .reviewer-role {
+  color: #FF741F;
+}
+
+.dark-mode .reviewer-company {
+  color: #a0aec0;
+}
+
+.dark-mode .review-date {
+  color: #718096;
+}
+
+.dark-mode .review-text {
+  color: #cbd5e0;
+}
+
+.dark-mode .review-theme {
+  background: rgba(255, 116, 31, 0.15);
+  border-left-color: #FF741F;
+}
+
+.dark-mode .theme-label {
+  color: #a0aec0;
+}
+
+.dark-mode .theme-name {
+  color: #FF741F;
+}
+
+.dark-mode .review-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .helpful-btn {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #cbd5e0;
+  background: transparent;
+}
+
+.dark-mode .helpful-btn:hover {
+  border-color: #FF741F;
+  color: #FF741F;
+  background: rgba(255, 116, 31, 0.1);
+}
+
+.dark-mode .verified-badge {
+  color: #48bb78;
+}
+
+.dark-mode .reviews-cta {
+  background: linear-gradient(135deg, #FF741F 0%, #ff8c42 100%);
+}
+
+.dark-mode .cta-title {
+  color: white;
+}
+
+.dark-mode .cta-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.dark-mode .cta-button {
+  background: white;
+  color: #FF741F;
+}
+
+.dark-mode .cta-button:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
