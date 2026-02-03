@@ -89,7 +89,7 @@ const Support = () => {
                 <div className="support-action">
                   <div className="support-buttons">
                     <button 
-                      onClick={() => navigate('/contact')}
+                      onClick={() => navigate('/contact', { state: { scrollToForm: true } })}
                       className="support-btn secondary"
                     >
                       Get Started

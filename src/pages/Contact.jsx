@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import logoImage from '../assets/logo.png';
@@ -8,6 +9,8 @@ import './Contact.css';
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 const Contact = () => {
+  const location = useLocation();
+  const formSectionRef = useRef(null);
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -20,6 +23,15 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [validationErrors, setValidationErrors] = useState({});
+
+  // Scroll to form section when navigated from "Get Started" button
+  useEffect(() => {
+    if (location.state?.scrollToForm && formSectionRef.current) {
+      setTimeout(() => {
+        formSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [location.state?.scrollToForm]);
 
   const handleChange = (e) => {
     setFormData({
@@ -137,7 +149,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="contact-form-section">
+      <section className="contact-form-section" ref={formSectionRef}>
         <div className="container">
           <div className="form-wrapper">
             <div className="form-header">
