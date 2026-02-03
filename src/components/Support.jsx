@@ -90,19 +90,9 @@ const Support = () => {
                       href="https://chat.whatsapp.com/LRgagp3fuaM1hk8261RiCy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="support-btn primary">
-                      
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M7 17l9.2-9.2M17 17V7H7"/>
-                      </svg>
-                    </a>
-                    <a 
-                      href="https://chat.whatsapp.com/LRgagp3fuaM1hk8261RiCy"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="support-btn secondary"
                     >
-                       
+                      Get Started
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M7 17l9.2-9.2M17 17V7H7"/>
                       </svg>
