@@ -169,7 +169,7 @@ html {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   width: 100%;
-  height: 60px;
+  height: 70px;
   display: none;
 }
 
@@ -208,7 +208,7 @@ html {
   display: flex;
   align-items: center;
   gap: 20px;
-  height: 60px;
+  height: 70px;
   width: 100%;
 }
 
