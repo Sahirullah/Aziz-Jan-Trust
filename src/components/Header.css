@@ -142,7 +142,7 @@ html {
 /* Main Navigation */
 .main-nav {
   background: #FF741F;
-  padding: 0;
+  padding: 3px;
   width: 100%;
   margin-left: 0;
   position: relative;
