@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import about2 from '../assets/about2.jpg';
 import instructor1 from '../assets/Instructors/Instructor1.png';
 import instructor2 from '../assets/Instructors/Instructor2.jfif';
 import instructor4 from '../assets/Instructors/instructor4.jfif';
@@ -92,7 +93,7 @@ const About = () => {
                 </p>
               </div>
               <div className="aziz-jan-image">
-                <img src={instructor1} alt="Aziz Jan Trust Community" className="aziz-jan-img" />
+                <img src={about2} alt="Aziz Jan Trust Community" className="aziz-jan-img" />
               </div>
             </div>
           </div>
