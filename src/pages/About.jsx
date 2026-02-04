@@ -218,7 +218,7 @@ const About = () => {
                 to bring hope and opportunity to underserved communities.
               </p>
               <div className="cta-buttons">
-                <a href="/join-us" className="cta-button primary">
+                <a href="/join-us" className="cta-button secondary">
                   Get Involved
                 </a>
                 <a href="/contact" className="cta-button secondary">
