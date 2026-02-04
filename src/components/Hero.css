@@ -1,12 +1,17 @@
 .hero {
   background: url('../assets/presence/peshawar.jpg') center/cover no-repeat fixed;
+  background-attachment: fixed;
   min-height: 2vh;
   display: flex;
   align-items: center;
   color:   #1e1f1f;
-  text-shadow:  white 4px 2px 4px;
   position: relative;
   overflow: hidden;
+  filter: brightness(0.95);
+}
+
+.hero::backdrop {
+  backdrop-filter: blur(3px);
 }
 
 .hero::before {
@@ -16,7 +21,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  z-index: 0;
 }
 
 .hero::after {
@@ -69,7 +76,7 @@
 
 .hero-search {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 50px;
   padding: 6px;

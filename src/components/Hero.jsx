@@ -14,9 +14,8 @@ const Hero = () => {
             Aziz Jan Welfare Trust
           </h1>
           <p className="hero-subtitle">
-            Discover thousands of high-quality handouts, assignments, and study materials 
-            for Aziz Jan Welfare Trust students.
-          </p>
+             Aziz Jan Welfare Trust serves humanity with free education, food, medical aid, and relief.
+          </p><br />
           <div className="hero-search">
             <input 
               type="email" 
