@@ -16,7 +16,7 @@ const About = () => {
     {
       id: 1,
       name: 'Basit Ali',
-      role: 'Experienced Professional',
+      role: 'Admin',
       position: 'Admin-MD',
       bio: 'Experienced Professional in Management Operations, Administration, Accounts, Marketing, Business Development, Social Media, and Amusement Park Operations.',
       image: instructor1
@@ -24,7 +24,7 @@ const About = () => {
     {
       id: 2,
       name: 'Tatheer Hussain',
-      role: 'CEO of T4E',
+      role: 'WMA Trainer',
       position: 'Instructor',
       bio: 'CEO of T4E, Software Developer, and International Technical Trainer associated with the University of Peshawar, SMIT, AKTI, and NAVTTC.',
       image: instructor2
@@ -32,7 +32,7 @@ const About = () => {
     {
       id: 3,
       name: 'Faisal Habib',
-      role: 'Freelancer & Designer',
+      role: 'Graphic Designing Trainer',
       position: 'Instructor',
       bio: 'Digital Marketing & Social Media Expert, Graphic & Motion Designer, UI/UX Designer, and Professional Trainer.',
       image: instructor4
@@ -40,7 +40,7 @@ const About = () => {
     {
       id: 4,
       name: 'Aqleem Orakzai',
-      role: 'Frontend Engineer',
+      role: 'WMA Trainer',
       position: 'Instructor',
       bio: 'Frontend Engineer skilled in HTML, CSS, JavaScript, React, Next.js, TypeScript, and Angular, creating dynamic and user-friendly web applications.',
       image: instructor5
