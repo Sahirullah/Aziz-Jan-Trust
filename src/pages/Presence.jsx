@@ -22,9 +22,6 @@ import bangladeshGif from '../assets/presence/Bangladesh.gif';
 // Import gallery images as fallbacks
 import gallery0 from '../assets/Gallery0.jpg';
 
-// Import hero background image
-import mainHQImage from '../assets/main head quarter.png';
-
 const Presence = () => {
   const pakistanCities = [
     {
@@ -157,9 +154,9 @@ const Presence = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="presence-hero" style={{ backgroundImage: `url(${mainHQImage})` }}>
+      <section className="presence-hero">
         <div className="presence-hero-content">
-          <h1 className="presence-hero-title">Global Presence of Aziz Jan Trust</h1>
+          <h1 className="presence-hero-title">Global Presence</h1>
           <p className="presence-hero-subtitle">
             Building a strong and compassionate network across Pakistan and the world
           </p>

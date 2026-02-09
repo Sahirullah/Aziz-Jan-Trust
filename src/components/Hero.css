@@ -63,6 +63,7 @@
   margin-bottom: 24px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   letter-spacing: -1px;
+  color: #FF741F;
 }
 
 .hero-subtitle {
@@ -72,6 +73,7 @@
   opacity: 0.95;
   font-weight: 400;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #FF741F;
 }
 
 .hero-search {
@@ -153,10 +155,11 @@
 
 .stat-label {
   font-size: 14px;
-  opacity: 0.85;
-  font-weight: 500;
+  opacity: 1;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: #FF741F !important;
 }
 
 .hero-image {
@@ -451,7 +454,7 @@
 }
 
 .dark-mode .stat-label {
-  color: #cbd5e0;
+  color: #FF741F !important;
 }
 
 .dark-mode .stat::after {
